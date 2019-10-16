@@ -141,6 +141,10 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 
 21. Repeat this process with all plates in the atlases
 
+22. Complete and submit an imagery quality control checklist. *LMEC uses peer-editing to ensure data has been created and processed at a high-quality*
+
+
+
 
 
 
@@ -207,7 +211,7 @@ If you make any edits to gcps:
 10. **File → Reset Georeferencer** and open the next image from the original scan archival TIFF folder
 
 
-#### Atlas insets
+#### Georeferencing insets
 
 1. Georeference the plate twice. Once for the main section, and once for the inset (a portion of the map will be wrong in both cases)
 
@@ -218,7 +222,7 @@ If you make any edits to gcps:
 4. When adding metadata, the inset should have its own record in metadata.csv. All of the fields for this record should have identical values to that of the "main" plate. The only field for the inset records that should have a different value than the main plate is the identifier value (identifier vs. identifier_inset1).
 
 
-#### Multiple-scale volumes
+#### Handling multiple-scale volumes
 
 Historical urban atlases for densely populated cities are likely to include plates that are homogenous in scale.
 
@@ -233,11 +237,260 @@ On the other hand, it is common in atlases representing less densely-populated a
 
 
 
-## Create footprint
+## Creating the masking footprint
 
-Coming soon...
+### Context
 
-## Create Mosaic
+This step produces a **footprint** for the atlas. This footprint is a polygon layer used to:
+
+1. Mask out superfluous or empty “white space” on historical atlas plates, a necessary step for seamless mosaicing
+2. Store references to plate-level library metadata, ultimately included in front-facing interfaces for the purpose of increasing accessibility to the historical archives
+
+Broadly, this is accomplished by:
+
+1. Generating a polygon layer that includes a feature for every georeferenced plate in the atlas, and editing the geometry of these features to appropriately reflect the desired extent of the plate data (including insets)
+2. Joining the newly created footprint with plate-level library metadata
+3. Exporting the footprint in geoJSON format for use in front-facing discovery environments
+
+### Tips
+
+- Use the [libguide plate index](https://apps.bpl.org/nblmc/indexes/index-pinney-1861-boston.html "libguide plate index example"), or, if no libguide plate index exists, the [historical index plate](https://collections.leventhalmap.org/search/commonwealth:6h446z575 "historical index plate example") to determine which plates are adjacent to one another and warrant a comparison. <br> 
+*Prior to offering direct access to high-resolution mosaiced imagery, BPL provided vector plate indices to locate atlas plates by location. Conceptually and in format, these index guides resemble the footprint layer described by this step, but because these indices were created for the purpose of locating plates, and not for mosaicing, they lack the necessary degree of accuracy required to create high-quality mosaics.* 
+
+- To change image transparency, right-click the layer in the table of contents → Properties → Legend → use arrow to add opacity slider to Used Widgets. After clicking OK, slider will appear in layer list
+
+- Properties → Transparency → **No Data** set to **0** removes the black border 
+
+- Make sure snapping is set to **Vertex and Segment**, and **Topological Editing and Snapping on Intersection** are **enabled** 
+Project → Snapping options 
+
+	- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features. 
+
+	- Setting the snapping radius to a lower value will allow for more control over where to place points (15 px seems to work well)
+	
+	- There should not be gaps or overlap between map plate boundaries
+	
+**EDITING TOOLS OVERVIEW**
+
+- Vertex tool  (click, move mouse to new location, click) moves an already existent “node” <br>
+![Vertex tool](/media/img/vertex.png)
+
+- Double-clicking on a line will allow the creation of a new vertex
+
+- Holding down the space bar will temporarily allow you to pan around
+
+- This info button will tell you which plate the boundary refers to (make sure index layer is highlighted in layer list) <br>
+![Start georeferencing](/media/img/info.png)
+
+- Select a vertex & press the delete key to delete 
+
+- Selecting a data layer in the layer list and pressing the space bar will toggle the layer on & off
+
+
+
+### Steps
+
+#### Generating geometry
+
+
+1. Change the Airtable field “footprint” from “to do” to “in progress”
+
+2. Make a copy of [create-plate-index.py](https://github.com/nblmc/urban-atlases-portal/blob/master/backend/create-plate-index.py "script to autogenerate footprint layer") inside the folder containing the georeferenced images (spatial_imagery)
+
+3. Open a terminal at the folder containing imagery by **right-clicking → New terminal at folder**
+
+4. Run the following command:
+
+```shell
+$ python3 create-plate-index.py
+```
+
+5. Open QGIS
+
+6. Add newly generated `atlas_root/spatial_imagery/index/index.shp` to map
+
+> This is an index file that contains features with the extent of each georeferenced image. Each polygon corresponds to a record in the index attribute table, with the plate id name (e.g. _0001) as the value for field “identifier”. You will need to edit the boundaries/vertices of each polygon to create a masking footprint suitable for mosaicing. 
+
+7. Add the imagery of a feature that needs editing, along with imagery of adjacent plates, for comparison
+
+8. Drag the index shapefile to the top of the layer list, so that it sits on top of the imagery, and adjust the transparency so the imagery is visible
+
+9. Open the attribute table
+
+10. Click on the pencil icon to toggle editing
+
+11. Remove the .tif suffix from the identifier values, so that values are only the plate name 
+
+> **G1234_B6G475_S2_1867v1_0006.tif**  → becomes → **G1234_B6G475_S2_1867v1_0006**
+
+12. Click the pencil & save the edits
+
+13. Exit the attribute table
+
+#### Drawing and editing polygons
+
+1. Main document menu → toggle editing
+
+2. Make sure snapping is set to **Vertex and Segment**, and **Topological Editing and Snapping on Intersection** are **enabled** 
+Project → Snapping options 
+
+	- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features. 
+
+	- Setting the snapping radius to a lower value will allow for more control over where to place points (15 px seems to work well)
+	
+	- There should not be gaps or overlap between map plate boundaries
+
+	
+	
+	
+> Where to draw the new footprints on each plate is up to your discretion; general guidelines require the edges of map plates to match up to one another and as much information useful to a user is preserved. <br><br>
+If there are areas of overlap, select the portion from whichever map has the most useful/detailed information (street names and historic street numbers are visible, etc). <br><br>
+There will inevitably be areas where the maps do not match exactly or some information/features will be sacrificed but the goal is to limit this and make the most useful and aesthetically pleasing map mosaic possible.
+Treat every property like it is the one a researcher wants to find!
+
+
+#### Cleaning and adding metadata
+
+
+<details>
+<summary>Note on BPL metadata particulars</summary>
+
+> - The instructions to join features to library metadata are specific to the ways BPL creates, manages & and stores metadata for its maps<br>
+> - These instructions can be applied to other metadata configurations -- the key is that there needs to be a field common to the polygon footprint layer and the bibliographic metadata table for each unique atlas plate in order to complete a one-to-one join between the polygon layer and the tabular metadata table <br>
+> - BPL uses the **identifier** field for this join. Joining this polygon layer where each feature represents the geographic extent of a collections item to library metadata increases accessibility to the historical collections items within the context of map-based discovery interfaces<br>
+
+</details>
+
+1. Open a blank workbook in Excel
+
+2. Save As → metadata.csv in a folder titled “metadata” in the atlas root directory 
+
+3. Prompt “Do you want to keep that format?” YES
+
+<details>
+<summary>Finding correct BPL metadata spreadsheet:</summary>
+
+> Spreadsheets containing official BPL library metadata for each sheet are in `CLIR\metadata`. You will need to search through the csvs using the atlas call number to find the file that contains the atlas you are working on (these documents were created when “batches” of maps or atlases were sent to BPL for the purpose of digitization or ingest into the digital repository. Because they were sent at different times in different “batches,” some are located in different spreadsheets)
+</details>
+
+4. Once you have located the correct “batch” for your atlas, copy/paste the values for the following fields into the new spreadsheet:
+	- **Repository identifier** - e.g. G1234_B6G475_S2_1867v1_0001 
+	- **Digital commonwealth ID** - e.g. commonwealth:6h446z575
+	- **Title** - e.g. Insurance map of Boston : volume 1
+	- **Plate** - e.g. plate 10 or plate N 
+		- **If metadata does not have a unique field for plate:** please make a note of this, and follow [Special Instructions for Creating Plate Field](https://geoservices.leventhalmap.org/docs/#/computing/atlas-processing?id=creating-plate-field "instructions for creating plate field")
+	- **Publisher** - e.g. D.A. Sanborn
+	- **Year** - e.g. 1867
+
+5. Insert a row at the top of the new spreadsheet and enter the following header field names:
+	- identifier
+	- commonweal
+	- title
+	- plate
+	- publisher
+	- year
+	
+6. Save the file
+
+7. Add metadata.csv to QGIS **Layer → Add Layer → Add Delimited Text Layer**
+
+> File format = **CSV** <br>
+> Number of header lines to discard = **0** <br>
+> “First record has field names” = **CHECKED** <br>
+> “Detect field types” = **UNCHECKED** <br>
+> Geometry definition = **No Geometry (attribute only table)** 
+
+!> If no data found in file: <br> 1. Open metadata in Atom <br> 2. [line-ending-selector](https://atom.io/packages/line-ending-selector "line-ending-selector") <br> 3. Save <br> 4. Try again!
+
+8. Add → Close
+
+9. Join Boundary polygon data & metadata.csv <br>
+**Right click Boundary → Properties → Joins → Green Plus Sign (bottom left)**
+
+> - Join Layer = **metadata** 
+> - Join field = **identifier**
+> - Target field = **identifier**
+
+10. Open the Boundary attribute table to make sure everything joined properly, and all of the values have populated
+
+
+#### Exporting the footprint
+
+1. **Right click layer containing join → Export**
+
+2. **Save Features As**
+
+> - Format = **ESRI Shapefile**
+> - Destination path = `atlas_root/footprint/Boundary.shp`
+> - CRS: **EPSG 3857 - WGS 84 / Web Mercator**
+
+3. **OK**. Boundary file should be added to the map
+
+4. Open attribute table to ensure join is preserved
+
+5. Open **layer properties → Source Fields**
+
+6. Edit field names so that they match standards:
+
+> - identifier
+> - commonweal
+> - title
+> - plate
+> - publisher
+> - year
+
+7. Click **pencil → Do you want to save your changes → YES**
+
+8. Open attribute table to ensure fields are named properly <br>
+![Boundary.shp fields](/media/img/fields.png)
+
+9. **Right-click Boundary file → Export → Save Features As**
+
+> - Format = **GeoJSON**
+> - Destination path = `atlas_root/footprint/Boundary.geoJSON`
+> - CRS: **EPSG 4326 - WGS 84**
+
+10. Complete and submit a footprint quality control checklist. *LMEC uses peer-editing to ensure data has been created and processed at a high-quality*
+
+
+
+### Special Instructions
+
+#### Preparing metadata for insets
+
+If your atlas contains insets:
+
+1. In metadata.csv, copy the record that exists for the whole plate (e.g. if the inset is for `_0004_inset1`, copy record `_0004`)
+
+2. Insert a new row in the spreadsheet with the copied values
+
+3. In the identifier field for the new record you just created, add appropriate _inset suffix
+
+4. Every feature you have created or edited in the boundary file **needs to have a corresponding record in metadata.csv** for the one-to-one join to perform correctly
+
+5. The only field where values should differ between insets and corresponding “main” plate (_0004 vs. _0004_inset1) is the identifier field. All of the rest of the metadata should be the same. 
+
+
+#### Grabbing plate properties for JSON
+
+There may be some cases where the plate field is not included in the library metadata. This field **does** need to be included in Boundary.geojson. Follow these steps:
+
+1. Create a copy of get-plate-value.py and place it inside the folder containing Boundary.geojson `atlas/footprint/Boundary.geojson`
+
+2. Open a terminal at the folder containing imagery by **right-clicking → New terminal at folder**
+
+3. Run the following command:
+
+```shell
+$ python3 get-plate-value.py
+```
+4. Follow the prompts, inspecting the plate values in the digital collections
+
+5. Open Boundary.geojson in a text editor and ensure that the plate field was created, and values were populated correctly
+
+
+	
+## Mosaicing
 
 ### Context
 
@@ -279,7 +532,7 @@ $ python3 mosaic.py
 7. Adjust transparency on the footrpint masking layer and peer through, checking that all plates were masked correctly. There should be no unexplainable whitespace, and imagery should be included for every area that has a masking polygon feature. It is better to catch errors during this check than after the lengthy tile generation process runs.
 
 
-## Generate tiles
+## Generating tiles
 
 1. When the mosaic has finished, set up a directory on the CLIRSTORAGE external hard drive for the atlas.
 Copy the atlas **barcode** from the Airtable, and create a folder at the root level of the hard drive with folder name **barcode**
@@ -314,7 +567,7 @@ $ gdal2tiles.py -r cubic -p mercator -e -z 13-20 --processes=6 mosaic.tif tiles/
 9. At the beginning of the tile generation process, mosaic.tif was copied directly into the barcode folder, in order to generate tiles at the correct directory level. Drag mosaic.tif into `CLIRSTORAGE/barcode/src/mosaic` to permanently store the mosaic TIFF in the src folder
 
 
-## Publish tiles
+## Publishing tiles
 
 1. If not already installed, download and install [CyberDuck](https://cyberduck.io/ "CyberDuck")
 
