@@ -1,3 +1,8 @@
+<head>
+<title>Mosaicing Atlases</title>
+</head>
+
+
 # Mosaicing and Publishing Atlas Plates
 
 This guide will walk through a process that begins with a [collection of individual atlas plates](https://collections.leventhalmap.org/search?utf8=%E2%9C%93&q=39999059015550 "Cambridge 1873 plate list"), and results in a [mosaiced tiled map service](https://geoservices.leventhalmap.org/atlas-extent-viewer/index.html#39999059015550 "Cambridge 1873 mosaic").
@@ -254,22 +259,22 @@ Broadly, this is accomplished by:
 
 ### Tips
 
-- Use the [libguide plate index](https://apps.bpl.org/nblmc/indexes/index-pinney-1861-boston.html "libguide plate index example"), or, if no libguide plate index exists, the [historical index plate](https://collections.leventhalmap.org/search/commonwealth:6h446z575 "historical index plate example") to determine which plates are adjacent to one another and warrant a comparison. <br> 
-*Prior to offering direct access to high-resolution mosaiced imagery, BPL provided vector plate indices to locate atlas plates by location. Conceptually and in format, these index guides resemble the footprint layer described by this step, but because these indices were created for the purpose of locating plates, and not for mosaicing, they lack the necessary degree of accuracy required to create high-quality mosaics.* 
+- Use the [libguide plate index](https://apps.bpl.org/nblmc/indexes/index-pinney-1861-boston.html "libguide plate index example"), or, if no libguide plate index exists, the [historical index plate](https://collections.leventhalmap.org/search/commonwealth:6h446z575 "historical index plate example") to determine which plates are adjacent to one another and warrant a comparison. <br>
+*Prior to offering direct access to high-resolution mosaiced imagery, BPL provided vector plate indices to locate atlas plates by location. Conceptually and in format, these index guides resemble the footprint layer described by this step, but because these indices were created for the purpose of locating plates, and not for mosaicing, they lack the necessary degree of accuracy required to create high-quality mosaics.*
 
 - To change image transparency, right-click the layer in the table of contents → Properties → Legend → use arrow to add opacity slider to Used Widgets. After clicking OK, slider will appear in layer list
 
-- Properties → Transparency → **No Data** set to **0** removes the black border 
+- Properties → Transparency → **No Data** set to **0** removes the black border
 
-- Make sure snapping is set to **Vertex and Segment**, and **Topological Editing and Snapping on Intersection** are **enabled** 
-Project → Snapping options 
+- Make sure snapping is set to **Vertex and Segment**, and **Topological Editing and Snapping on Intersection** are **enabled**
+Project → Snapping options
 
-	- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features. 
+	- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features.
 
 	- Setting the snapping radius to a lower value will allow for more control over where to place points (15 px seems to work well)
-	
+
 	- There should not be gaps or overlap between map plate boundaries
-	
+
 **EDITING TOOLS OVERVIEW**
 
 - Vertex tool  (click, move mouse to new location, click) moves an already existent “node” <br>
@@ -282,7 +287,7 @@ Project → Snapping options
 - This info button will tell you which plate the boundary refers to (make sure index layer is highlighted in layer list) <br>
 ![Start georeferencing](/media/img/info.png)
 
-- Select a vertex & press the delete key to delete 
+- Select a vertex & press the delete key to delete
 
 - Selecting a data layer in the layer list and pressing the space bar will toggle the layer on & off
 
@@ -309,7 +314,7 @@ $ python3 create-plate-index.py
 
 6. Add newly generated `atlas_root/spatial_imagery/index/index.shp` to map
 
-> This is an index file that contains features with the extent of each georeferenced image. Each polygon corresponds to a record in the index attribute table, with the plate id name (e.g. _0001) as the value for field “identifier”. You will need to edit the boundaries/vertices of each polygon to create a masking footprint suitable for mosaicing. 
+> This is an index file that contains features with the extent of each georeferenced image. Each polygon corresponds to a record in the index attribute table, with the plate id name (e.g. _0001) as the value for field “identifier”. You will need to edit the boundaries/vertices of each polygon to create a masking footprint suitable for mosaicing.
 
 7. Add the imagery of a feature that needs editing, along with imagery of adjacent plates, for comparison
 
@@ -319,7 +324,7 @@ $ python3 create-plate-index.py
 
 10. Click on the pencil icon to toggle editing
 
-11. Remove the .tif suffix from the identifier values, so that values are only the plate name 
+11. Remove the .tif suffix from the identifier values, so that values are only the plate name
 
 > **G1234_B6G475_S2_1867v1_0006.tif**  → becomes → **G1234_B6G475_S2_1867v1_0006**
 
@@ -331,18 +336,18 @@ $ python3 create-plate-index.py
 
 1. Main document menu → toggle editing
 
-2. Make sure snapping is set to **Vertex and Segment**, and **Topological Editing and Snapping on Intersection** are **enabled** 
-Project → Snapping options 
+2. Make sure snapping is set to **Vertex and Segment**, and **Topological Editing and Snapping on Intersection** are **enabled**
+Project → Snapping options
 
-	- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features. 
+	- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features.
 
 	- Setting the snapping radius to a lower value will allow for more control over where to place points (15 px seems to work well)
-	
+
 	- There should not be gaps or overlap between map plate boundaries
 
-	
-	
-	
+
+
+
 > Where to draw the new footprints on each plate is up to your discretion; general guidelines require the edges of map plates to match up to one another and as much information useful to a user is preserved. <br><br>
 If there are areas of overlap, select the portion from whichever map has the most useful/detailed information (street names and historic street numbers are visible, etc). <br><br>
 There will inevitably be areas where the maps do not match exactly or some information/features will be sacrificed but the goal is to limit this and make the most useful and aesthetically pleasing map mosaic possible.
@@ -363,7 +368,7 @@ Treat every property like it is the one a researcher wants to find!
 
 1. Open a blank workbook in Excel
 
-2. Save As → metadata.csv in a folder titled “metadata” in the atlas root directory 
+2. Save As → metadata.csv in a folder titled “metadata” in the atlas root directory
 
 3. Prompt “Do you want to keep that format?” YES
 
@@ -374,10 +379,10 @@ Treat every property like it is the one a researcher wants to find!
 </details>
 
 4. Once you have located the correct “batch” for your atlas, copy/paste the values for the following fields into the new spreadsheet:
-	- **Repository identifier** - e.g. G1234_B6G475_S2_1867v1_0001 
+	- **Repository identifier** - e.g. G1234_B6G475_S2_1867v1_0001
 	- **Digital commonwealth ID** - e.g. commonwealth:6h446z575
 	- **Title** - e.g. Insurance map of Boston : volume 1
-	- **Plate** - e.g. plate 10 or plate N 
+	- **Plate** - e.g. plate 10 or plate N
 		- **If metadata does not have a unique field for plate:** please make a note of this, and follow [Special Instructions for Creating Plate Field](https://geoservices.leventhalmap.org/docs/#/computing/atlas-processing?id=creating-plate-field "instructions for creating plate field")
 	- **Publisher** - e.g. D.A. Sanborn
 	- **Year** - e.g. 1867
@@ -389,7 +394,7 @@ Treat every property like it is the one a researcher wants to find!
 	- plate
 	- publisher
 	- year
-	
+
 6. Save the file
 
 7. Add metadata.csv to QGIS **Layer → Add Layer → Add Delimited Text Layer**
@@ -398,7 +403,7 @@ Treat every property like it is the one a researcher wants to find!
 > Number of header lines to discard = **0** <br>
 > “First record has field names” = **CHECKED** <br>
 > “Detect field types” = **UNCHECKED** <br>
-> Geometry definition = **No Geometry (attribute only table)** 
+> Geometry definition = **No Geometry (attribute only table)**
 
 !> If no data found in file: <br> 1. Open metadata in Atom <br> 2. [line-ending-selector](https://atom.io/packages/line-ending-selector "line-ending-selector") <br> 3. Save <br> 4. Try again!
 
@@ -407,7 +412,7 @@ Treat every property like it is the one a researcher wants to find!
 9. Join Boundary polygon data & metadata.csv <br>
 **Right click Boundary → Properties → Joins → Green Plus Sign (bottom left)**
 
-> - Join Layer = **metadata** 
+> - Join Layer = **metadata**
 > - Join field = **identifier**
 > - Target field = **identifier**
 
@@ -468,7 +473,7 @@ If your atlas contains insets:
 
 4. Every feature you have created or edited in the boundary file **needs to have a corresponding record in metadata.csv** for the one-to-one join to perform correctly
 
-5. The only field where values should differ between insets and corresponding “main” plate (_0004 vs. _0004_inset1) is the identifier field. All of the rest of the metadata should be the same. 
+5. The only field where values should differ between insets and corresponding “main” plate (_0004 vs. _0004_inset1) is the identifier field. All of the rest of the metadata should be the same.
 
 
 #### Grabbing plate properties for JSON
@@ -489,7 +494,7 @@ $ python3 get-plate-value.py
 5. Open Boundary.geojson in a text editor and ensure that the plate field was created, and values were populated correctly
 
 
-	
+
 ## Mosaicing
 
 ### Context
