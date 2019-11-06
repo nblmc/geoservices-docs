@@ -80,7 +80,7 @@ To begin isolating JP, let's observe the neighborhood data's attribute table.
 
 > **Data type:** Shapefile, geoPackage or geoJSON are all acceptable choices for vector data. We are choosing shapefile, just for consistency. <br>
 > **Export location:** Use the ... ellipses icon to indicate where you want to save the export. As this clipping feature is temporary (a means to an end), we are keeping in our downloads folder, and not saving it anywhere more meaningful. <br>
-> **Projection:** This will be specific to your project. We are sticking with the projection the data is arrived in, WGS 84.
+> **Projection:** This will be specific to your project. We are sticking with the projection the data arrived in, WGS 84.
 
 ![save](/media/save.png)
 
@@ -92,21 +92,23 @@ To begin isolating JP, let's observe the neighborhood data's attribute table.
 
 ## Clip data by new extent
 
-1). **Vector menu → Geoprocessing Tools → Clip** <br><br>
+Now that we have a geography to clip by, we are ready to clip the building data.
+
+1). Select **Vector menu → Geoprocessing Tools → Clip** <br><br>
 ![clip](/media/clip.png)
 
 
 2). Use the following settings:
 
 > **Input layer:** Data you want to clip, in this case, building footprints, or STRUCTURES_POLY <br>
-> **Overlay layer:** Clipping layer, the layer you just created and added to the map <br>
-> **Clipped:** `Ellipses → Save to File` to name the final data output and save somewhere that makes sense. In this case, we will name the output "buildings_jp" *The default format is geoPackage (.gpkg), which is an open version of .shp*
+> **Overlay layer:** Clipping layer, the layer just created <br>
+> **Clipped:** `Ellipses → Save to File` to name the final data output and save somewhere that makes sense. In this case, we will name the output "buildings_jp" *The default format is geoPackage (.gpkg), which is OK - it's an open version of .shp*
 
 3). **Run**
 
-When the tool has finished, a message will appear reading "Task Complete". The final, clipped data also should have been added to the map.
+When the tool has finished running, a message will appear reading "Task Complete". The final, clipped data will also be added to the map.
 
-4). Select close on the clipping tool window to get back to your map, and explore the new data you created to ensure it has accomplished the desired result.
+4). Select **close** on the clipping tool window to return to your map, and explore the new data you created to ensure the desired result has been accomplished.
 
 The final version should resemble something like this:
 ![final](/media/final.png)
