@@ -601,7 +601,7 @@ A transfer status dialog box will appear with feedback on the anticipated transf
 
 6. From the Airtable, open the atlas "mosaic_URL" link. Check that high-quality tiles are appearing for the entire coverage extent of the atlas, at all desired zoom levels.
 
-7. When tiles have successfully uploaded to the cloud storage, download a copy of the "tiles" folder inside `CLIRSTORAGE/barcode` to back them up on the external hard drive, and delete the local copy created. 
+7. When tiles have successfully uploaded to the cloud storage, download a copy of the "tiles" folder inside `CLIRSTORAGE/barcode` to back them up on the external hard drive, and delete the local copy created.
 
 7. Change the "status" field in the Airtable to **"Complete"**
 
