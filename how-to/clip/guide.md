@@ -94,21 +94,31 @@ To begin isolating JP, let's observe the neighborhood data's attribute table.
 
 Now that we have a geography to clip by, we are ready to clip the building data.
 
-1). Select **Vector menu → Geoprocessing Tools → Clip** <br><br>
-![clip](/media/clip.png)
+To do a rough clip of one layer's geometry by the geometry of another layer, you can use the tool available from **Vector menu → Geoprocessing Tools → Clip**.
+
+Rather than clip the input data to the exact extent of the masking layer, we probably should instead extract all features from the building layer present within the extent of the clipping layer. This method will ensure that buildings along the neighborhood border won't be cut in half.
 
 
-2). Use the following settings:
+1). Select **Processing → Toolbox** <br><br>
+![toolbox](/media/toolbox.png)
 
-> **Input layer:** Data you want to clip, in this case, building footprints, or STRUCTURES_POLY <br>
-> **Overlay layer:** Clipping layer, the layer just created <br>
-> **Clipped:** `Ellipses → Save to File` to name the final data output and save somewhere that makes sense. In this case, we will name the output "buildings_jp" *The default format is geoPackage (.gpkg), which is OK - it's an open version of .shp*
+
+2). Select **Vector Selection → Extract by location** <br><br>
+![extract by location](/media/extract-location.png)
+
+3). Select the following settings:
+
+> **Extract features from:** Data you want to clip, in this case, building footprints, or STRUCTURES_POLY <br>
+> **Where the features (geometric predicate):** In this case, select `are within`. *Take a moment to look at the other options. This powerful suite of spatial editing tools extends your ability to wrangle geospatial data into the exact format you are looking for.*<br>
+> **By comparing them to features from:** newly created clipping geometry layer <br>
+> **Extracted(location):** `Ellipses → Save to File` to name the final data output and save somewhere that makes sense. In this case, we will name the output "buildings_jp" *The default format is geoPackage (.gpkg), which is OK - it's an open version of .shp* <br>
+> **Open output file after running algorithm:** Checked ✓
 
 3). **Run**
 
-When the tool has finished running, a message will appear reading "Task Complete". The final, clipped data will also be added to the map.
+When the tool has finished running, the final, clipped data will be added to the map.
 
-4). Select **close** on the clipping tool window to return to your map, and explore the new data you created to ensure the desired result has been accomplished.
+4). Select **close** on the extract by location window to return to your map, and explore the new data you created to ensure the desired result has been accomplished.
 
 The final version should resemble something like this:
 ![final](/media/final.png)
