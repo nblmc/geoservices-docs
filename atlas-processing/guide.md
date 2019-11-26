@@ -300,7 +300,7 @@ Project → Snapping options
 
 1. Change the Airtable field “footprint” from “to do” to “in progress”
 
-2. Make a copy of [create-plate-index.py](https://github.com/nblmc/urban-atlases-portal/blob/master/backend/create-plate-index.py "script to autogenerate footprint layer") inside the folder containing the georeferenced images (spatial_imagery)
+2. Make a copy of [create-plate-index.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/create-plate-index.py "script to autogenerate footprint layer") inside the folder containing the georeferenced images (spatial_imagery)
 
 3. Open a terminal at the folder containing imagery by **right-clicking → New terminal at folder**
 
@@ -512,7 +512,7 @@ If errors are returned, the mosaic will not generate, and you will need to use t
 
 ### Steps
 
-1. Copy [mosaic.py](https://github.com/nblmc/urban-atlases-portal/blob/master/backend/mosaic.py "mosaicing script") into the working atlas root directory
+1. Copy [mosaic.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/mosaic.py"mosaicing script") into the working atlas root directory
 
 2. Open a terminal at the atlas root directory by **right-clicking → New terminal at folder**
 
