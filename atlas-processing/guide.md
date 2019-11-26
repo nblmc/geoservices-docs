@@ -512,7 +512,7 @@ If errors are returned, the mosaic will not generate, and you will need to use t
 
 ### Steps
 
-1. Copy [mosaic.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/mosaic.py"mosaicing script") into the working atlas root directory
+1. Copy [mosaic.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/mosaic.py "mosaicing script") into the working atlas root directory
 
 2. Open a terminal at the atlas root directory by **right-clicking → New terminal at folder**
 
