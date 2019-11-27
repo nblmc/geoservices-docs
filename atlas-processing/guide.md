@@ -70,6 +70,7 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 
 ### Steps
 
+
 1. Update the asset management table by changing **imagery** and **control points** fields from "to do" to "in progress" *LMEC uses an Airtable database to keep track of the status of the ~100 atlases in this project*
 
 2. Open QGIS
@@ -144,9 +145,14 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 
 20. If, for some reason, they did not export correctly, it is possible to export them by navigating back into the **GDAL Georeferencer** window and selecting **File → Save GCP points as ...**
 
-21. Repeat this process with all plates in the atlases
+21. Open the new geoTIFF in a photo editing software, preferably Photoshop. You only need to do this for the first plate in every atlas, to ensure bit depth of archival scans is correct. If it opens normally, proceed georeferencing the rest of the plates. If the geotiff will not open, you will need to run script convert-16-to-8-bit-tiffs.sh before proceeding.
 
-22. Complete and submit an imagery quality control checklist. *LMEC uses peer-editing to ensure data has been created and processed at a high-quality*
+22. In the QGIS georeferencer, select **File → Reset Georeferencer**
+
+23. Repeat this process with all plates in the atlases
+
+
+24. Complete and submit an imagery quality control checklist. *LMEC uses peer-editing to ensure data has been created and processed at a high-quality*
 
 
 
@@ -399,7 +405,7 @@ Treat every property like it is the one a researcher wants to find!
 
 !> If no data found in file: <br> 1. Open metadata in Atom <br> 2. [line-ending-selector](https://atom.io/packages/line-ending-selector "line-ending-selector") <br> 3. Save <br> 4. Try again!
 
-If **still no data** after taking above steps, export the entire metadata table from Airtable as a .csv, and copy records from the downloaded copy. Sometimes copying records directly from Airtable preserves some character formatting QGIS does not like. 
+If **still no data** after taking above steps, export the entire metadata table from Airtable as a .csv, and copy records from the downloaded copy. Sometimes copying records directly from Airtable preserves some character formatting QGIS does not like.
 
 8. Add → Close
 
