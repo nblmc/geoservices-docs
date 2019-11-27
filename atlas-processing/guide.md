@@ -368,34 +368,26 @@ Treat every property like it is the one a researcher wants to find!
 
 1. Open a blank workbook in Excel
 
+2. Enter the following field headers for each column:
+  - identifier
+  - call_no
+  - commonweal
+  - title
+  - plate
+  - publisher
+  - year
+
+
 2. Save As → metadata.csv in a folder titled “metadata” in the atlas root directory
 
 3. Prompt “Do you want to keep that format?” YES
 
-<details>
-<summary>Finding correct BPL metadata spreadsheet:</summary>
+4. To find metadata for the atlas you are working on, navigate to the CLIR_Progress Airtable. There is a view titled "METADATA". CTRL + F and search for either an identifier you know is in your atlas, or the atlas call number. Highlight the records for every plate in the atlas, and copy the values into your new excel workbook.
 
-> Spreadsheets containing official BPL library metadata for each sheet are in `CLIR\metadata`. You will need to search through the csvs using the atlas call number to find the file that contains the atlas you are working on (these documents were created when “batches” of maps or atlases were sent to BPL for the purpose of digitization or ingest into the digital repository. Because they were sent at different times in different “batches,” some are located in different spreadsheets)
-</details>
+5. In excel, you can delete the row "call_no," and any records not pertinent to the plates you need metadata for (example: index plate, title page)
 
-4. Once you have located the correct “batch” for your atlas, copy/paste the values for the following fields into the new spreadsheet:
-	- **Repository identifier** - e.g. G1234_B6G475_S2_1867v1_0001
-	- **Digital commonwealth ID** - e.g. commonwealth:6h446z575
-	- **Title** - e.g. Insurance map of Boston : volume 1
-	- **Plate** - e.g. plate 10 or plate N
-		- **If metadata does not have a unique field for plate:** please make a note of this, and follow [Special Instructions for Creating Plate Field](https://geoservices.leventhalmap.org/docs/#/computing/atlas-processing?id=creating-plate-field "instructions for creating plate field")
-	- **Publisher** - e.g. D.A. Sanborn
-	- **Year** - e.g. 1867
 
-5. Insert a row at the top of the new spreadsheet and enter the following header field names:
-	- identifier
-	- commonweal
-	- title
-	- plate
-	- publisher
-	- year
-
-6. Save the file
+6. Save the file, ensuring it is saved as a CSV.
 
 7. Add metadata.csv to QGIS **Layer → Add Layer → Add Delimited Text Layer**
 
@@ -406,6 +398,8 @@ Treat every property like it is the one a researcher wants to find!
 > Geometry definition = **No Geometry (attribute only table)**
 
 !> If no data found in file: <br> 1. Open metadata in Atom <br> 2. [line-ending-selector](https://atom.io/packages/line-ending-selector "line-ending-selector") <br> 3. Save <br> 4. Try again!
+
+If **still no data** after taking above steps, export the entire metadata table from Airtable as a .csv, and copy records from the downloaded copy. Sometimes copying records directly from Airtable preserves some character formatting QGIS does not like. 
 
 8. Add → Close
 
