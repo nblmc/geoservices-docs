@@ -1,6 +1,24 @@
-* Computing Environments
-    * [Setting up a Mac](/computing/mac-setup "Setting up a Mac")
-* Atlascope Project
-    * [Atlas Processing](/atlas-processing/guide.md "Atlas Processing Workflow")
-* Geoprocessing How-To
-    * [Clip data by extent](/how-to/clip/guide.md "Clip Data by Extent")
+- **Workshop Materials**
+    - [Map Making with Python](/workshops/python.md "Python")
+
+- **Atlascope Project**
+    - Using atlascope
+        - [Introduction](/atlascope/using/introduction.md "Introduction")
+        - [By location](/atlascope/using/location.md "Finding atlases by location")
+        - [By address](/atlascope/using/address.md "Finding atlases by address")
+        - [Comparing](/atlascope/using/comparing.md "Comparison tools")
+        - [Sharing](/atlascope/using/sharing.md "Sharing from the app")
+        - [Use with collections](/atlascope/using/collections.md "Finding in the collections")
+        - [All urban atlases @ BPL](/atlascope/using/all-atlases.md "All urban atlases @ the BPL")
+        - [Using tiles](/atlascope/using/tiles.md "Using Atlascope tile layers")
+    - Creating atlas tiles
+        - [Introduction](/atlascope/creating/introduction.md "Introduction")
+        - [Requirements](/atlascope/creating/requirements.md "Requirements & recommendations")
+        - [Georeferencing](/atlascope/creating/georeferencing.md "Georeferencing")
+        - [Masking footprint](/atlascope/creating/masking.md "Masking")
+        - [Mosaicing](/atlascope/creating/mosaicing.md "Mosaicing")
+        - [Creating & sharing tiles](/atlascope/creating/tiles.md "Tiles")
+
+- **How To Guides**
+    - [Setting up a Mac for GIS](/how-to/mac-setup.md "Setting up a Mac")
+    - [Clipping data by extent](/how-to/clip-by-extent.md "Clip Data by Extent")
