@@ -32,3 +32,5 @@ This guide provides information about all atlases of Boston available at the BPL
 ![Towns](/media/img/towns.png)
 
 This will bring you to a complete listing of historical town atlases available for research at the BPL. They are organized by County.
+
+For questions related to researching with the BPL holdings, please do not hesitate to get in touch via our [research form](https://www.leventhalmap.org/research/ "Research @ LMEC") or via email at reference@leventhalmap.org. 

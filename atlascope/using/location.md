@@ -58,4 +58,4 @@ Selecting one of the list options will turn tiles on for that layer.
 
 ![list](/media/gifs/list.gif)
 
-Atlascope includes a selection of the town, county and urban atlases available at the Boston Public Library. To learn more about the full research collection, please find the [All urban atlases @ the BPL guide.](geoservices.leventhalmap.org/docs/#/atlascope/using/all-atlases "All atlases @ BPL")
+Atlascope includes a selection of the town, county and urban atlases available at the Boston Public Library. To learn more about the full research collection, please find the [All urban atlases @ the BPL guide.](https://geoservices.leventhalmap.org/docs/#/atlascope/using/all-atlases "All atlases @ BPL")
