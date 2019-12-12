@@ -38,6 +38,8 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 
 1. Update the asset management table by changing **imagery** and **control points** fields from "to do" to "in progress" *LMEC uses an Airtable database to keep track of the status of the ~100 atlases in this project*
 
+2. Open one of the archival tiffs in a photo software to ensure scans for that atlas were imaged with 8-bit depth. If it is 16-bit, you will need to convert the images to 8-bit, or this georeferencing/mosaicing will not work.
+
 2. Open QGIS
 
 3. Add a basemap **Browser →  XYZ Tiles →  Open Street Map**
