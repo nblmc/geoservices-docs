@@ -40,7 +40,7 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 
 2. Open one of the archival tiffs in a photo software to ensure scans for that atlas were imaged with 8-bit depth. If it is 16-bit, you will need to convert the images to 8-bit, or this georeferencing/mosaicing will not work.
 
-2. Open QGIS
+2. Once you have ensured the bit depth of the original images is 8-bit, open QGIS
 
 3. Add a basemap **Browser →  XYZ Tiles →  Open Street Map**
 
