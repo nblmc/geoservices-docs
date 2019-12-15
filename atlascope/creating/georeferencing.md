@@ -212,3 +212,9 @@ On the other hand, it is common in atlases representing less densely-populated a
 2. Create a new record in the Airtable for each scale mosaic with the appropriate barcode ID
 
 3. Proceed with the georeferencing process as normal. A separate footprint will also need to be created for each scale.
+
+### Handling image files
+
+In cases where you wish to download all image files associated with a particular BPL barcode, use [get-tiffs-from-dc.py.](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-tiffs-from-dc.py "Download all tiffs script"). Resulting downloaded images will be named the file's BPL identifier. 
+
+In cases where you need to batch edit the file names of images, use [rename-files.py.](https://github.com/nblmc/atlascope-assets/blob/master/scripts/rename-files.py "Rename files script")
