@@ -138,9 +138,11 @@ Treat every property like it is the one a researcher wants to find!
 
 3. Prompt “Do you want to keep that format?” YES
 
-4. To find metadata for the atlas you are working on, navigate to the CLIR_Progress Airtable. There is a view titled "METADATA". CTRL + F and search for either an identifier you know is in your atlas, or the atlas call number. Highlight the records for every plate in the atlas, and copy the values into your new excel workbook.
+4. To find metadata for the atlas you are working on, navigate to the shared Maps drive/metadata. There is a file titled "metadata_clir.csv". Make a local copy wherever your temporary working files are.
 
-5. In excel, you can delete the row "call_no," and any records not pertinent to the plates you need metadata for (example: index plate, title page)
+5. Open the copy of metadata_clir.csv. CTRL + F and search for either an identifier you know is in your atlas, or the atlas call number. Highlight the records for every plate in the atlas, and copy the values into your new, atlase-specific excel workbook.
+
+6. In the new, atlas-specific excel workbook, you can delete the row "call_no," and any records not pertinent to the plates you need metadata for (example: index plate, title page)
 
 
 6. Save the file, ensuring it is saved as a CSV.
@@ -155,7 +157,6 @@ Treat every property like it is the one a researcher wants to find!
 
 !> If no data found in file: <br> 1. Open metadata in Atom <br> 2. [line-ending-selector](https://atom.io/packages/line-ending-selector "line-ending-selector") <br> 3. Save <br> 4. Try again!
 
-If **still no data** after taking above steps, export the entire metadata table from Airtable as a .csv, and copy records from the downloaded copy. Sometimes copying records directly from Airtable preserves some character formatting QGIS does not like.
 
 8. Add → Close
 
@@ -230,7 +231,7 @@ If your atlas contains insets:
 
 There may be some cases where the plate field is not included in the library metadata. This field **does** need to be included in Boundary.geojson. Follow these steps:
 
-1. Create a copy of get-plate-value.py and place it inside the folder containing Boundary.geojson `atlas/footprint/Boundary.geojson`
+1. Create a copy of [get-plate-value.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-plate-value.py "get-plate-value.py")and place it inside the folder containing Boundary.geojson `atlas/footprint/Boundary.geojson`
 
 2. Open a terminal at the folder containing imagery by **right-clicking → New terminal at folder**
 
