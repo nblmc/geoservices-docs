@@ -231,7 +231,7 @@ If your atlas contains insets:
 
 There may be some cases where the plate field is not included in the library metadata. This field **does** need to be included in Boundary.geojson. Follow these steps:
 
-1. Create a copy of [get-plate-value.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-plate-value.py "get-plate-value.py")and place it inside the folder containing Boundary.geojson `atlas/footprint/Boundary.geojson`
+1. Create a copy of [get-plate-value.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-plate-value.py "get-plate-value.py") and place it inside the folder containing Boundary.geojson `atlas/footprint/Boundary.geojson`
 
 2. Open a terminal at the folder containing imagery by **right-clicking → New terminal at folder**
 
