@@ -2,7 +2,7 @@
 
 ## Context
 
-Atlascope is a web app for exploring and browsing the rich collection of urban atlases held at the Boston Public Library.
+[ATLASCOPE](https://atlascope.leventhalmap.org/ "ATLASCOPE") is a web app for exploring and browsing the rich collection of urban atlases held at the Boston Public Library.
 
 For researching urban history in the US, **urban atlases**, like the ones that were produced for fire insurance surveys, are some of the most important resources. But because these atlases are physically clumsy, and broken up page-by-page into areas covering usually only a few city blocks, it’s not always easy to find what you’re looking for, and even more difficult to compare across time.
 
@@ -15,7 +15,7 @@ This guide will walk through some of the ways Atlascope can help you use the urb
 
 ## Credits
 
-Atlascope was developed at the Leventhal Map & Education Center at the Boston Public Library by Garrett Dash Nelson and Belle Lipton. Atlas layers were prepared by a team of interns including Ian Donnelly, Hanaan Yazdi, Abby Duker, Rachel Mead, Luwei Chen, Brian Kominick, Madison Bastress, Liz Kellam and Victoria Mak.
+Atlascope was developed at the Leventhal Map & Education Center at the Boston Public Library by Garrett Dash Nelson and Belle Lipton. Atlas layers were prepared by a team of interns including Ian Donnelly, Hanaan Yazdi, Abby Duker, Rachel Mead, Luwei Chen, Brian Kominick, Madison Bastress, Liz Kellam, Victoria Mak and Samantha Carr.
 
 Digitization and preparation of atlas layers was made possible by the [Council on Library and Information Resources.](https://www.clir.org/ "CLIR")
 
