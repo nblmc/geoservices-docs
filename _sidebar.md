@@ -1,5 +1,4 @@
 - **Workshop Materials**
-    - [Map Making 101](/workshops/map101.md "Map Making 101")
     - [Map Making with Python](/workshops/python.md "Simple Map Making with Python")
 
 - **Atlascope Project**
