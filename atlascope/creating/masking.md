@@ -25,6 +25,9 @@ Broadly, this is accomplished by:
 - Make sure snapping is set to **Vertex and Segment**, and **Topological Editing and Snapping on Intersection** are **enabled**
 Project → Snapping options
 
+![Snapping](/media/img/snapping.png)
+
+
 	- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features.
 
 	- Setting the snapping radius to a lower value will allow for more control over where to place points (15 px seems to work well)
@@ -95,6 +98,10 @@ $ python3 create-plate-index.py
 2. Make sure snapping is set to **Vertex and Segment**, and **Topological Editing and Snapping on Intersection** are **enabled**
 Project → Snapping options
 
+![Snapping](/media/img/snapping.png)
+
+
+
 	- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features.
 
 	- Setting the snapping radius to a lower value will allow for more control over where to place points (15 px seems to work well)
@@ -103,12 +110,18 @@ Project → Snapping options
 
 
 
-
 > Where to draw the new footprints on each plate is up to your discretion; general guidelines require the edges of map plates to match up to one another and as much information useful to a user is preserved. <br><br>
 If there are areas of overlap, select the portion from whichever map has the most useful/detailed information (street names and historic street numbers are visible, etc). <br><br>
 There will inevitably be areas where the maps do not match exactly or some information/features will be sacrificed but the goal is to limit this and make the most useful and aesthetically pleasing map mosaic possible.
 Treat every property like it is the one a researcher wants to find!
 
+!> FINAL STEP: When you have finished your footprint, run a validity check on the geometry to ensure all features are valid. You can do this by selecting **Vector → Geometry Tools → Check Validity**
+
+Make sure the correct file is selected; all other options can be left at default. 
+
+If all features are included in the Valid Output file, proceed. If any features are included in the Invalid Output file, correct the geometry before proceeding. (Refer to correct snapping settings to ensure you are creating polygons with no overlapping geometry)
+
+![check-validity](/media/gif/check-validity.gif)
 
 ### Joining metadata
 
@@ -206,8 +219,7 @@ Treat every property like it is the one a researcher wants to find!
 > - Destination path = `atlas_root/footprint/Boundary.geoJSON`
 > - CRS: **EPSG 4326 - WGS 84**
 
-10. Complete and submit a footprint quality control checklist. *LMEC uses peer-editing to ensure data has been created and processed at a high-quality*
-
+10. Update the Airtable to reflect that the footprint has been completed, ensure that the footprint data is accessible on the Maps Drive for mosaicing, and if imagery is also completed, post "atlas short description ready to mosaic" to #atlascope-general slack channel. 
 
 
 ## Special Instructions

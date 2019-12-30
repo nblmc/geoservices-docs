@@ -130,7 +130,7 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 
 23. Repeat this process with all plates in the atlases
 
-24. Ensure all spatial imagery and ground control points are backed with the [correct backup structure](https://geoservices.leventhalmap.org/docs/#/atlascope/creating/backup "backup") 
+24. Ensure all spatial imagery and ground control points are backed with the [correct backup structure](https://geoservices.leventhalmap.org/docs/#/atlascope/creating/backup "backup").
 
 25. Complete and submit an imagery quality control checklist. *LMEC uses peer-editing to ensure data has been created and processed at a high-quality*
 
