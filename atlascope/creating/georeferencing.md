@@ -35,8 +35,31 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 
 ## Steps
 
+<details>
+<summary>Locating and managing BPL source imagery</summary>
 
-1. Update the asset management table by changing **imagery** and **control points** fields from "to do" to "in progress" *LMEC uses an Airtable database to keep track of the status of the ~100 atlases in this project*
+> - Locate the correct atlas using BPL [town](http://guides.bpl.org/mass-urban-atlases "Massachusetts Town Atlases") and [city](http://guides.bpl.org/urban-atlases/list "Boston Urban Atlases") libguides <br>
+> - Included under the volume-level citation in the libuide is a link to a list of all of the plates in that volume in the digital collections.<br>
+> - In the list results, observe the range of plate numbers or letters in the atlas, the number of plates to be included in the mosaic, and how many of these plates need to be georeferenced (some will be non-cartographic front matter, like the title plate)<br>
+> - Open one of the individual maps. Note the **identifier** and **barcode** field in the metadata. <br>
+> - The **identifier** is the unique ID for every plate-level digital object. The literal string observed as the value for the **identifier** field in the object's metadata should be the file name every time you are exporting both geoTIFFFS and control points<br>
+> - The **barcode** is the unique ID at the volume level
+
+</details>
+
+
+1. Update the asset management table by changing **imagery** and **control points** fields from "to do" to "in progress" *LMEC uses an Airtable database to keep track of the status of the hundreds of atlases in this project*
+
+2. Create a folder locally on your computer, or, if you wish to be able to access your atlas project from multiple different locations, on a flash drive. If you are using a flash drive, ensure it is formatted as ExFAT. 
+
+  The folder structure should be: `local storage → temp-atlas-processing → barcode`
+
+3. To download all archival quality geoTIFFs associated with any given atlas, create a copy of [get-all-by-barcode.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-all-by-barcode.py "Download all tiffs script") inside the atlas barcode folder. 
+
+4. Open up this new copy of get-all-by-barcode.py in a text editor, and follow the commented instructions in the script, ensuring the barcode field is correct and will download images for the atlas you are working on. 
+
+  This will take approximately twenty minutes to run, and will result in a folder entitled "arch_tiff" containing archival copies of all tiffs included in your atlas. 
+
 
 2. Open one of the archival tiffs in a photo software to ensure scans for that atlas were imaged with 8-bit depth. If it is 16-bit, you will need to convert the images to 8-bit, or this georeferencing/mosaicing will not work.
 
@@ -53,17 +76,6 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 6. Open the TIFF you wish to georeference in the georeferencer, by clicking the blue checkered add raster icon in the menu banner.<br>
 ![Add raster](/media/img/add-raster.png)
 
-<details>
-<summary>Locating and managing BPL source imagery</summary>
-
-> - Locate the correct atlas using BPL [town](http://guides.bpl.org/mass-urban-atlases "Massachusetts Town Atlases") and [city](http://guides.bpl.org/urban-atlases/list "Boston Urban Atlases") libguides <br>
-> - Included under the volume-level citation in the libuide is a link to a list of all of the plates in that volume in the digital collections.<br>
-> - In the list results, observe the range of plate numbers or letters in the atlas, the number of plates to be included in the mosaic, and how many of these plates need to be georeferenced (some will be non-cartographic front matter, like the title plate)<br>
-> - Open one of the individual maps. Note the **identifier** and **barcode** field in the metadata. <br>
-> - The **identifier** is the unique ID for every plate-level digital object. The literal string observed as the value for the **identifier** field in the object's metadata should be the file name every time you are exporting both geoTIFFFS and control points<br>
-> - The **barcode** is the unique ID at the volume level
-
-</details>
 
 7. After you have added one of the TIFFs to the **GDAL Georeferencer**, click the Add Point button in the menu banner
 ![Add point](/media/img/qgis-add-gcp.png)
@@ -118,8 +130,9 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 
 23. Repeat this process with all plates in the atlases
 
+24. Ensure all spatial imagery and ground control points are backed with the [correct backup structure](https://geoservices.leventhalmap.org/docs/#/atlascope/creating/backup "backup") 
 
-24. Complete and submit an imagery quality control checklist. *LMEC uses peer-editing to ensure data has been created and processed at a high-quality*
+25. Complete and submit an imagery quality control checklist. *LMEC uses peer-editing to ensure data has been created and processed at a high-quality*
 
 
 
@@ -215,6 +228,6 @@ On the other hand, it is common in atlases representing less densely-populated a
 
 ### Image files
 
-In cases where you wish to download all image files associated with a particular BPL barcode, use [get-tiffs-from-dc.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-tiffs-from-dc.py "Download all tiffs script"). Resulting downloaded images will be named the file's BPL identifier.
+In cases where you wish to download all image files associated with a particular BPL barcode, use [get-all-by-barcode.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-all-by-barcode.py "Download all tiffs script"). Resulting downloaded images will be named the file's BPL identifier.
 
 In cases where you need to batch edit the file names of images, use [rename-files.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/rename-files.py "Rename files script").

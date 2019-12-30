@@ -5,10 +5,10 @@
 
 Each historical atlas included in the project has a different geographic coverage. This is because the atlases were created for different towns and areas, at a time when the urban landscape was developing rapidly. For these reasons, no two atlases in our collection have exactly the same geographic extent.
 
-Rather than limit browsing to a selection from a long list of atlas layers, our project allows you to find layers based on where you are on the map.
+Rather than limit browsing to a selection from a long list of atlas layers, our product allows you to find layers based on where you are on the map.
 
 
-The app has been designed so that you can pan and zoom around a modern street map or satellite imagery, and the app will automatically find all layers that are available for that particular location.
+The app has been designed so that you can pan and zoom around a modern street map or satellite imagery, and the app will automatically find all historical layers that are available for that particular location.
 
 !> **As you move** around the map, the dropdown menus with available **atlas layers will change** and update to reflect what is available for that area.
 
@@ -25,6 +25,8 @@ On the right-hand side of the menu, please find an icon alert with the number of
 ![available](/media/img/number-available.png)
 
 ## Find me tool
+
+This app works well on a mobile device.
 
 From the Atlascope home screen, select `Find me` to find your current location and return historical atlas layers available for that location.
 

@@ -18,6 +18,7 @@
         - [Masking footprint](/atlascope/creating/masking.md "Masking")
         - [Mosaicing](/atlascope/creating/mosaicing.md "Mosaicing")
         - [Creating & sharing tiles](/atlascope/creating/tiles.md "Tiles")
+        - [Backup](/atlascope/creating/backup.md "Backup")
 
 - **How To Guides**
     - [Setting up a Mac for GIS](/how-to/mac-setup.md "Setting up a Mac")

@@ -91,7 +91,7 @@ There are some formulae in the OSGeo4Mac tap that *also* exist in Homebrew's cor
 
 The following packages are useful to install for geospatial computing, using the `$ brew install` command:
 
-- `osgeo-gdal`
+- `gdal`
   - Dependencies of this package which will be auto-installed include `osgeo-proj`, `osgeo-postgresql`, `numpy`
 - `node`
 - `imagemagick`
