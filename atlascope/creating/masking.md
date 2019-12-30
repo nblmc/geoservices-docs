@@ -121,6 +121,7 @@ Make sure the correct file is selected; all other options can be left at default
 
 If all features are included in the Valid Output file, proceed. If any features are included in the Invalid Output file, correct the geometry before proceeding. (Refer to correct snapping settings to ensure you are creating polygons with no overlapping geometry)
 
+**Example of successful validity check:**
 ![check-validity](/media/gif/check-validity.gif)
 
 ### Joining metadata
