@@ -27,12 +27,11 @@ Project → Snapping options
 
 ![Snapping](/media/img/snapping.png)
 
+- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features.
 
-	- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features.
+- Setting the snapping radius to a lower value will allow for more control over where to place points (15 px seems to work well)
 
-	- Setting the snapping radius to a lower value will allow for more control over where to place points (15 px seems to work well)
-
-	- There should not be gaps or overlap between map plate boundaries
+- There should not be gaps or overlap between map plate boundaries
 
 **EDITING TOOLS OVERVIEW**
 
@@ -71,13 +70,15 @@ $ python3 create-plate-index.py
 
 5. Open QGIS
 
-6. Add newly generated `atlas_root/spatial_imagery/index/index.shp` to map
+6. Add newly generated `atlas_root/spatial_imagery/index/index.geojson` to map
 
-> This is an index file that contains features with the extent of each georeferenced image. Each polygon corresponds to a record in the index attribute table, with the plate id name (e.g. 0001) as the value for field “identifier”. You will need to edit the boundaries/vertices of each polygon to create a masking footprint suitable for mosaicing.
+> This is an index file that contains features with the extent of each georeferenced image. Each polygon corresponds to a record in the index attribute table, with the plate id name (e.g. 0001) as the value for field “identifier”. You will need to edit the boundaries/vertices of each polygon to create a masking footprint suitable for mosaicing.<br><br>
+Once each feature has been edited appropriately, this layer will be exported and used both to mask the imagery in preparation for mosaicing *and* as important front-end data in the discovery application.
+
 
 7. Add the imagery of a feature that needs editing, along with imagery of adjacent plates, for comparison
 
-8. Drag the index shapefile to the top of the layer list, so that it sits on top of the imagery, and adjust the transparency so the imagery is visible
+8. Drag the index json to the top of the layer list, so that it sits on top of the imagery, and adjust the transparency so the imagery is visible
 
 9. Open the attribute table
 
@@ -101,12 +102,11 @@ Project → Snapping options
 ![Snapping](/media/img/snapping.png)
 
 
+- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features.
 
-	- The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features.
+- Setting the snapping radius to a lower value will allow for more control over where to place points (15 px seems to work well)
 
-	- Setting the snapping radius to a lower value will allow for more control over where to place points (15 px seems to work well)
-
-	- There should not be gaps or overlap between map plate boundaries
+- There should not be gaps or overlap between map plate boundaries
 
 
 
@@ -175,7 +175,7 @@ If all features are included in the Valid Output file, proceed. If any features 
 8. Add → Close
 
 9. Join Boundary polygon data & metadata.csv <br>
-**Right click Boundary → Properties → Joins → Green Plus Sign (bottom left)**
+**Right click boundary layer → Properties → Joins → Green Plus Sign (bottom left)**
 
 > - Join Layer = **metadata**
 > - Join field = **identifier**
