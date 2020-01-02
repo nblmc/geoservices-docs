@@ -190,8 +190,8 @@ If all features are included in the Valid Output file, proceed. If any features 
 
 2. **Save Features As**
 
-> - Format = **ESRI Shapefile**
-> - Destination path = `atlas_root/footprint/Boundary.shp`
+> - Format = **GeoJSON**
+> - Destination path = `atlas_root/footprint/Masking.geojson`
 > - CRS: **EPSG 3857 - WGS 84 / Web Mercator**
 
 3. **OK**. Boundary file should be added to the map
