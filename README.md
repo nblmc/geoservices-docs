@@ -24,7 +24,7 @@ it's an opportunity for us to get to know you! In addition to online guides, the
 help, which we can do over the phone, in person, or over email. 
 
 Here are the best ways to get in touch with us if you are looking for help with a specific project, hoping to find out more
-about our discovery tools or workshops, or just interested in some general information:
+about our discovery tools or workshops, or are just interested in some general information:
 
 1. Fill out our [Geospatial Reference Request Form](https://www.leventhalmap.org/research/geospatial-data/ "Geospatial Reference Request Form.")
 
@@ -33,5 +33,5 @@ Belle Lipton, Geospatial Librarian
 blipton@leventhalmap.org 
 617-859-2283 
 
-3. Stay tuned to our [calendar](https://www.leventhalmap.org/calendar "calendar") to keep track of our regularly occurring workshops centered on the themes of mapping and working with geospatial data. 
+3. Stay tuned to our [calendar](https://www.leventhalmap.org/calendar "calendar") to keep track of our regularly occurring workshops centered on the themes of mapping and geospatial data. 
 
