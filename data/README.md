@@ -18,7 +18,7 @@ The geospatial and statistical data we create, collect, preserve, describe, and 
 1. As we develop better search tools for sharing all of the data we make and collect, we will keep you in the loop.
 In the meantime, you can preview data from some of our recent projects [here](https://github.com/nblmc/geodata "here").
 
-2. Stay tuned to our [calendar](https://www.leventhalmap.org/calendar "calendar") to keep track of our regularly occurring workshops centered on the themes of mapping and geospatial data. 
+2. Stay tuned to our [calendar](https://www.leventhalmap.org/calendar "calendar") to keep track of our regularly occurring workshops and events centered on the themes of mapping and geospatial data. 
 
 3. For one-on-one help with a specific mapping project, including where to find the data you will need, or how to work with or create your own data, please fill out our [Geospatial Reference Request Form](https://www.leventhalmap.org/research/geospatial-data/ "Geospatial Reference Request Form").
 
