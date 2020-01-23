@@ -1,6 +1,6 @@
 - [Home](/ "LMEC DOCS") 
 - **<span style="color:purple">Guides</span>**
-  - [HOW TO](/how-to/ "How To Guides")
-  - [DATA](/data/ "Data help @ LMEC")
-  - [WORKSHOPS](/workshops/ "LMEC Workshops")
-  - [DISCOVERY TOOLS](/discovery-tools/  "Discovery tools")
+  - [How to](/how-to/ "How To Guides")
+  - [Data](/data/ "Data help @ LMEC")
+  - [Workshops](/workshops/ "LMEC Workshops")
+  - [Discovery tools](/discovery-tools/  "Discovery tools")
