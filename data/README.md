@@ -12,7 +12,7 @@ Here at the Map Center, we work with data in a number of capacities. We:
 Another big way we work with data at the Map Center is through our educational work. By attending our workshops and gallery exhibitions, you will encounter everything from data basics including how to find data and what that weird column name stands for, to bigger,
 weightier questions about data and the impact it can have on our lives (check out our upcoming exhibition, [Bending Lines](https://www.leventhalmap.org/exhibitions/#upcoming "Bending Lines"), opening this upcoming May 2020)
 
-The geospatial and statistical data we create, collect, preserve, describe, and help locate refer to specific types or formats of **information**. We believe the public library is a great place to get free access to information, so we have put together a list of some ways you can explore **data services available at the Map Center**:
+The geospatial and statistical data we create, collect, preserve, describe, and help locate refer to specific types or formats of **information**. We believe the public library is a great place to get free access to information, so we have put together a list of some of the ways you can explore **data services available at the Map Center**:
 
 
 1. As we develop better search tools for sharing all of the data we make and collect, we will keep you in the loop.

@@ -19,7 +19,7 @@ At the Map Center, we don't have the answer to every GIS question, but we probab
 We have assembled these guides as an ever-growing resource of written material on our GIS activities here at the 
 Map Center. 
 
-It's likely these guides may answer only part, or even none of your question, and that's okay, because
+It's likely these guides may answer only part, or even none of your questions, and that's okay, because
 it's an opportunity for us to get to know you! In addition to online guides, the Map Center offers one-on-one
 help, which we can do over the phone, in person, or over email. 
 
