@@ -14,6 +14,8 @@ interested in, and the barriers standing between you and these materials.
 
 This ever-growing set of written guides on the discovery tools we have developed will serve as complementary pals to the tools themselves, and will come in handy when learning how to make the most out of their use.
 
+To keep up with our community events centered on the use of these discovery tools, like the Atlascope community history nights, stay tuned to our [calendar](https://www.leventhalmap.org/calendar "calendar").
+
 If you have questions beyond what is contained in these guides about the Map Center's digital discovery tools, or would
 like to schedule staff trainings or community events centered on their use, please do not hesitate to email or call directly:
 <br>
