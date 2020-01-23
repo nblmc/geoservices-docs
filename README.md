@@ -20,10 +20,10 @@ We have assembled these guides as an ever-growing resource of written material o
 Map Center. 
 
 It's likely these guides may answer only part, or even none of your question, and that's okay, because
-it's an opportunity for us to talk to you! In addition to online guides, the Map Center offers one-on-one
-help, which we can do over the phone, in person, or via email. 
+it's an opportunity for us to get to know you! In addition to online guides, the Map Center offers one-on-one
+help, which we can do over the phone, in person, or over email. 
 
-Here are the best ways to get in touch with us, if you are working on a particular project, hoping to find out more
+Here are the best ways to get in touch with us, if you are looking for help with a specific project, are hoping to find out more
 about our discovery tools or workshops, or just looking for some general information:
 
 1. Fill out our [Geospatial Reference Request Form](https://www.leventhalmap.org/research/geospatial-data/ "Geospatial Reference Request Form.")
