@@ -1,4 +1,4 @@
-- [Home](/ "LMEC DOCS") 
+- [Home](/ "Geospatial @ LMEC") 
 - **<span style="color:purple">Guides</span>**
   - [How to](/how-to/ "How To Guides")
   - [Data](/data/ "Data help @ LMEC")

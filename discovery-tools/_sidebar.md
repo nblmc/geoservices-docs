@@ -1,3 +1,3 @@
 - [Home](/ "Discovery Tools Guide") 
 - **<span style="color:purple">DISCOVERY TOOL GUIDES</span>**
-  - [Atlascope User Manual](/discovery-tools/atlascope.md "ATLASCOPE USER MANUAL")
+  - [Atlascope User Manual](/discovery-tools/atlascope.md "Atlascope User Manual")

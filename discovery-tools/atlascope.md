@@ -1,19 +1,23 @@
-# Introduction
+## Welcome
 
-## Context
+Welcome to the user guide for [Atlascope](https://atlascope.leventhalmap.org/ "Atlascope"), a web app for browsing and researching with the rich collection of urban atlases held at the Boston Public Library. 
 
-[ATLASCOPE](https://atlascope.leventhalmap.org/ "ATLASCOPE") is a web app for exploring and browsing the rich collection of urban atlases held at the Boston Public Library.
 
-For researching urban history in the US, **urban atlases**, like the ones that were produced for fire insurance surveys, are some of the most important resources. But because these atlases are physically clumsy, and broken up page-by-page into areas covering usually only a few city blocks, it’s not always easy to find what you’re looking for, and even more difficult to compare across time.
+<iframe width="400" height="550" src="https://atlascope.leventhalmap.org/#view:embed$base:001$overlay:39999059011690$zoom:18.00$center:-7912348.885480463,5213458.735922582$mode:glass$pos:145"></iframe>
 
-Thanks to a grant from the [Council on Library and Information Resources](https://www.clir.org/ "CLIR"), we’ve been taking our urban atlases and transforming them into continuous, zoomable web layers. That takes a ton of hand labor identifying control points and mosaicing the pages together at their boundaries, a process which our interns have been taking on with great zeal. (for more on how this process works, please find our [Creating atlas tiles guide.](https://geoservices.leventhalmap.org/docs/#/atlascope/creating/introduction "Creating atlas tiles guides")
 
-On top of that GIS work, we’ve built a brand new web interface which automatically pulls up the atlases which cover an area you’re interested in. Atlascope allows you to compare historic atlases to one another and to modern maps, and then find the original items in the library collections. It’s an amazing resource for anyone interested in exploring how Boston has changed over time.
+For researching urban history in the US, **urban atlases**, like the ones produced for fire insurance surveys, are some of the most important resources. But because these atlases are physically clumsy, and broken up page-by-page into areas covering usually only a few city blocks, it’s not always easy to find what you’re looking for, and even more difficult to compare across time.
+
+Thanks to a grant from the [Council on Library and Information Resources](https://www.clir.org/ "CLIR"), the Leventhal Map & Education Center has been taking our urban atlases and transforming them into continuous, zoomable web layers. 
+
+Doing so takes a ton of hand labor identifying control points and mosaicing the pages together at their boundaries, a process which our interns have been taking on with great zeal. (If you work with these resources and are looking to replicate this process, please find our [Create Mosaics How-to Guide](http://geoservices.leventhalmap.org/#/how-to/create-mosaics "Create Mosaics How-to Guide") )
+
+On top of this GIS work, we’ve built a brand new web interface which automatically pulls up the atlases which cover an area you’re interested in. Atlascope allows you to compare historic atlases to one another and to modern maps, and then find the original items in the library collections. It’s an amazing resource for anyone interested in exploring how Boston has changed over time.
 
 This guide will walk through some of the ways Atlascope can help you use the urban atlas collection at the Boston Public Library.
 
 
-## Credits
+## Credits {docsify-ignore}
 
 Atlascope was developed at the Leventhal Map & Education Center at the Boston Public Library by Garrett Dash Nelson and Belle Lipton. Atlas layers were prepared by a team of interns including Ian Donnelly, Hanaan Yazdi, Abby Duker, Rachel Mead, Luwei Chen, Brian Kominick, Madison Bastress, Liz Kellam, Victoria Mak and Samantha Carr.
 
@@ -24,35 +28,27 @@ If you use these maps in your work, teaching, or publication, please cite Atlasc
 Interested in creating an Atlascope for your own city or library collection? Contact us for more information.
 
 
-## Finding atlases by location
+## Search by location
 
 
 ### Dynamic menus {docsify-ignore}
 
 Each historical atlas included in the project has a different geographic coverage. This is because the atlases were created for different towns and areas, at a time when the urban landscape was developing rapidly. For these reasons, no two atlases in our collection have exactly the same geographic extent.
 
-Rather than limit browsing to a selection from a long list of atlas layers, our product allows you to find layers based on where you are on the map.
 
+When using Atlascope, you can pan and zoom around the map, and Atlascope will automatically find all historical layers that are available for that particular location.
 
-The app has been designed so that you can pan and zoom around a modern street map or satellite imagery, and the app will automatically find all historical layers that are available for that particular location.
-
-!> **As you move** around the map, the dropdown menus with available **atlas layers will change** and update to reflect what is available for that area.
+!> **As you move** around the map, the dropdown **menus** with available atlas layers **will change** and update to reflect what is available for that area.
 
 ![menu](/media/gifs/menu.gif)
 
+
 As you move out of the range of one atlas, the app will automatically suggest the oldest atlas layer available for the new map location.
 
-### Atlases available {docsify-ignore}
 
-There are some handy indicators built in to let you know how many atlas layers are currently available to you at the particular location you are interacting with.
+## Find me 
 
-On the right-hand side of the menu, please find an icon alert with the number of available atlas layers for any location.
-
-![available](/media/img/number-available.png)
-
-### Find me tool {docsify-ignore}
-
-This app works well on a mobile device.
+Atlascope was designed to be used on-the-go!
 
 From the Atlascope home screen, select `Find me` to find your current location and return historical atlas layers available for that location.
 
@@ -68,7 +64,7 @@ If you would like to find your location initially as a point of reference, and t
 > You will need to enable location services on your device for the Find me tool to work. The Leventhal Map & Education Center does not record any of the location data; location services are required only to enable the Find me tool to work as you explore the city.
 
 
-### All atlases in app {docsify-ignore}
+## All available layers
 
 To access a list of all atlases available in the app, please follow the steps below.
 
@@ -89,7 +85,7 @@ Selecting one of the list options will turn tiles on for that layer.
 Atlascope includes a selection of the town, county and urban atlases available at the Boston Public Library. To learn more about the full research collection, please find the [All urban atlases @ the BPL guide.](https://geoservices.leventhalmap.org/docs/#/atlascope/using/all-atlases "All atlases @ BPL")
 
 
-## Finding atlases by address
+## Search by address
 
 There are two ways to search for atlases using a modern day address.
 
@@ -116,7 +112,7 @@ There are a few different tools available in the app to compare historical atlas
 
 You can control the overlay appearance by switching between Glass, Swipe, or Opacity modes.
 
-### Glass {docsify-ignore}
+### Glass 
 
 The default overlay mode in the app is the `Glass mode`, named so for its resemblance to a spyglass.
 
@@ -130,7 +126,7 @@ Glass mode can be activated at any time by selecting "Glass" from the app menu c
 
 ![glass](/media/img/glass.png)
 
-### Swipe {docsify-ignore}
+### Swipe 
 
 Another mode available is `Swipe mode`.
 
@@ -140,7 +136,7 @@ You can change the direction of the swipe by toggling between `Swipe Y` and `Swi
 
 
 
-### Opacity {docsify-ignore}
+### Opacity 
 
 The final available overlay mode is `Opacity mode`.
 
@@ -152,7 +148,7 @@ In addition to using the range slider to gradually increase or decrease opacity,
 
 
 
-### Change over time {docsify-ignore}
+## Change over time 
 
 
 Try setting both the base and overlay layers to historic atlases. What comparisons can you make that show how the city has changed?
@@ -176,20 +172,24 @@ In `Opacity mode`
 
 ## Sharing
 
-Coming soon! 
+To share a link to the whole app, or a specific view/location, following these steps:
+
+1. Click the Share button in the upper-right hand corner
+![share](/media/img/share.png)
+
+2. Select the appropriate share option <br><br>
+![share](/media/img/share-options.png)
 
 
-## Use with collections
-
-### Context {docsify-ignore}
+## Get the maps
 
 While using mosaiced atlas layers inside the Atlascope app is an intuitive way to access the materials, we understand there will certainly be cases where you wish to access high-resolution scans of individual atlas plates, and thus will need to be able to locate these unique items in our [digital collections](https://collections.leventhalmap.org/ "Digital collections").
 
-Or maybe, you even wish to visit the Map Center, and [research](https://www.leventhalmap.org/research/ "Research @ LMEC") with particular atlas plates in person!
+Or maybe, you even wish to visit the Map Center, and [research](https://www.leventhalmap.org/research/ "Research @ LMEC") with particular atlas pages in person!
 
-For these reasons, we have designed Atlascope to work symbiotically with our traditional library interfaces, specifically our digital collections and collection-level research guides for the historical urban atlas collection.
+For these reasons, Atlascope works symbiotically with our traditional library interfaces, specifically our digital collections and collection-level research guides for the historical urban atlas collection.
 
-In this guide you will learn how to use Atlascope to quickly find atlas plates in the digital collections.
+In this guide you will learn how to use Atlascope to quickly find atlas plates in the digital collections, download high-resolution images of the maps, and grab the map's citations.
 
 ### Steps {docsify-ignore}
 
@@ -203,31 +203,32 @@ In this guide you will learn how to use Atlascope to quickly find atlas plates i
 
 ![About this map](/media/img/about-this-map.png)
 
-Here, you will find bibliographic information about the volume, and will be presented with three options for finding this resource in the library collections.
+Here, you will find bibliographic information about the volume, and will be presented with options for finding this resource in the library collections.
 
 ![collections options](/media/img/lib-options.png)
 
-`View the catalog record` will bring you to the item record in the Boston Public Library's digital catalog.
-
-`View individual plates in the Digital Collections` will bring you to a query in the digital collections returning all results for plates associated with that volume's call number. This will essentially be a gallery of thumbnails. You will still need to page through the results to find the plate with the location of interest.
-
-5). The most useful option is to select `View plate boundaries and atlas extent`.
-
-Here, you will find tiles for only the volume at hand, and plate extent boundaries.
+**View plate boundaries and atlas extent** will take you to a page with only the layer for that atlas, and an outline showing each page in the atlas. Each blue/green shape corresponds with one page in that historical book, which is available to research with in person at the Map Center. 
 
 ![extent](/media/img/extent.png)
 
-6). Zoom in to the area of interest and click on the map.
-
-A pop-up will appear with bibliographic information, including a link to the item in the digital collections.
+When you click on a shape, a popup will tell you more biliographic information, including the collections identifier # for that page in our digital collections, and a link to the item.
 
 ![popup](/media/img/popup.png)
 
-7). Click `View in Digital Collections`
 
-You will be brought to the item in the digital collections.
 
-![digital collections](/media/img/dc.png)
+**View list of plates in the Digital Collections** will bring you to a query in the digital collections returning all results for plates associated with that volume's call number. This will essentially be a gallery of thumbnails. You will still need to page through the results to find the plate with the location of interest.
+
+*Hint:* This is a great way to find the index page for any atlas, which includes a symbology key. Each publisher uses different colors and markings to indicated different factors, so the index page legend can be helpful, and is available in the digital collections.
+
+
+**Find this plate in the Digital Collections** will bring you to a page with only that atlas layer again, but this time, zoomed in on the area you had been engaging with in the app.
+
+Click on the exact location you are looking for, and from the resulting popup, click "View in Digital Collections"
+
+![find-this-plate](/media/gifs/dc.gif)
+
+
 
 - To download a high-resolution scan, navigate to `Downloads` and select `Master (full resolution, uncompressed)`
 
@@ -242,15 +243,14 @@ You will be brought to the item in the digital collections.
 
 
 
-## All urban atlases at the BPL
+## All atlases @ BPL
 
-### Overview {docsify-ignore}
 
 While Atlascope includes an amazing number of atlases from the BPL collections covering Boston and surrounding towns, it does not include a significant portion of atlases available for research at the BPL.
 
 **Atlases not included in Atlascope**
 
-- Atlases outside of Boston Proper for most towns in Massachusetts.
+- Atlases outside of Boston Proper for most towns in Massachusetts - *coming soon!*
 
 - Atlases published after 1923 where rights are still retained by the copyright owner. This includes most of the twentieth-century Sanborns.
 
@@ -265,13 +265,21 @@ Though you cannot access these important archives in the app or digital collecti
 
 1). Navigate to the [Historical Urban Atlases of Boston Libguide.](https://guides.bpl.org/urban-atlases "Urban Atlas Libguide")
 
-This guide provides information about all atlases of Boston available at the BPL.
 
 2). To find a list of citations organized by neighborhood and chronology, select `List of Urban Atlases`.
 
-![List](/media/img/list-atlases.png)
 
-3). In the **Related Resources** tab on the left, select `Historical Urban Atlases of Massachusetts Towns @ the BPL`.
+3). To find all Boston urban atlases available for research **by location** click the `Find by Map` tab on the libguides. Atlases are grouped by neighborhood. Selecting an atlas from one of the neighborhood maps will tell you if that particular publisher/year has been added to Atlascope yet. 
+
+If it *has* we recommend using Atlascope to explore, as it is easier. If it has not yet been added, selecting that layer will prompt a boundary layer to appear, so you can still get information about a plate, or find a specific location in the digital collections.
+
+![libguides](/media/gifs/libguides.gif)
+
+
+
+
+
+If you are looking for towns outside of Boston, from the guides.bpl.org/urban-atlases page, navigate to **Related Resources** tab on the left, select `Historical Urban Atlases of Massachusetts Towns @ the BPL`.
 
 ![Towns](/media/img/towns.png)
 
@@ -280,11 +288,12 @@ This will bring you to a complete listing of historical town atlases available f
 For questions related to researching with the BPL holdings, please do not hesitate to get in touch via our [research form](https://www.leventhalmap.org/research/ "Research @ LMEC") or via email at reference@leventhalmap.org. 
 
 
-## Using tiles
+## Mosaic links
 
-One of the benefits of creating high-quality tiles for this project, is the ability to share them with you!
+We think one of the coolest aspects of creating high-resolution tiled mosaic layers of each atlas is our ability to share them with you.
 
-We are excited to share the app we have created for exploring these atlases, but we also encourage you to try using these atlas tiles in projects of your own.
+This section of the guide will give instructions on how to bring in the mosaic of any atlas in Atlascope to your own GIS project. 
+
 
 The tiles for each volume are accessible by selecting `About this map` and then copying the link under `XYZ Tile Endpoint`
 
