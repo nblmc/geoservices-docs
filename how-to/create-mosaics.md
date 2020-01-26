@@ -82,15 +82,15 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 
 1. Update the asset management table by changing **imagery** and **control points** fields from "to do" to "in progress" *LMEC uses an Airtable database to keep track of the status of the hundreds of atlases in this project*
 
-2. Create a folder locally on your computer, or, if you wish to be able to access your atlas project from multiple different locations, on a flash drive. If you are using a flash drive, ensure it is formatted as ExFAT. 
+2. Create a folder locally on your computer, or, if you wish to be able to access your atlas project from multiple different locations, on a flash drive. If you are using a flash drive, ensure it is formatted as ExFAT.
 
   The folder structure should be: `local storage → temp-atlas-processing → barcode`
 
-3. To download all archival quality geoTIFFs associated with any given atlas, create a copy of [get-all-by-barcode.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-all-by-barcode.py "Download all tiffs script") inside the atlas barcode folder. 
+3. To download all archival quality geoTIFFs associated with any given atlas, create a copy of [get-all-by-barcode.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-all-by-barcode.py "Download all tiffs script") inside the atlas barcode folder.
 
-4. Open up this new copy of get-all-by-barcode.py in a text editor, and follow the commented instructions in the script, ensuring the barcode field is correct and will download images for the atlas you are working on. 
+4. Open up this new copy of get-all-by-barcode.py in a text editor, and follow the commented instructions in the script, ensuring the barcode field is correct and will download images for the atlas you are working on.
 
-  This will take approximately twenty minutes to run, and will result in a folder entitled "arch_tiff" containing archival copies of all tiffs included in your atlas. 
+  This will take approximately twenty minutes to run, and will result in a folder entitled "arch_tiff" containing archival copies of all tiffs included in your atlas.
 
 
 2. Open one of the archival tiffs in a photo software to ensure scans for that atlas were imaged with 8-bit depth. If it is 16-bit, you will need to convert the images to 8-bit, or this georeferencing/mosaicing will not work.
@@ -265,7 +265,7 @@ In cases where you wish to download all image files associated with a particular
 In cases where you need to batch edit the file names of images, use [rename-files.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/rename-files.py "Rename files script").
 
 
-# Masking 
+# Masking
 
 ## Context
 
@@ -384,7 +384,7 @@ Treat every property like it is the one a researcher wants to find!
 
 !> FINAL STEP: When you have finished your footprint, run a validity check on the geometry to ensure all features are valid. You can do this by selecting **Vector → Geometry Tools → Check Validity**
 
-Make sure the correct file is selected; all other options can be left at default. 
+Make sure the correct file is selected; all other options can be left at default.
 
 If all features are included in the Valid Output file, proceed. If any features are included in the Invalid Output file, correct the geometry before proceeding. (Refer to correct snapping settings to ensure you are creating polygons with no overlapping geometry)
 
@@ -487,7 +487,7 @@ If all features are included in the Valid Output file, proceed. If any features 
 > - Destination path = `atlas_root/footprint/Boundary.geoJSON`
 > - CRS: **EPSG 4326 - WGS 84**
 
-10. Update the Airtable to reflect that the footprint has been completed, ensure that the footprint data is accessible on the Maps Drive for mosaicing, and if imagery is also completed, post "atlas short description ready to mosaic" to #atlascope-general slack channel. 
+10. Update the Airtable to reflect that the footprint has been completed, ensure that the footprint data is accessible on the Maps Drive for mosaicing, and if imagery is also completed, post "atlas short description ready to mosaic" to #atlascope-general slack channel.
 
 
 ## Special Instructions
@@ -616,13 +616,13 @@ $ gdal2tiles.py -r cubic -p mercator -e -z 13-20 --processes=6 mosaic.tif tiles/
 
 # Sharing
 
-1. If not already installed, download and install [CyberDuck](https://cyberduck.io/ "CyberDuck")
+1. Open CyberDuck. (If not already installed, download and install [here](https://cyberduck.io/ "CyberDuck")
 
 2. Click "Open Connection"
 
 3. Select Amazon S3 in the dropdown menu
 
-4. Connect with your cloud storage credentials. *LMEC credentials are stored in `Maps Center → GIS → CLIR → quick-reference → wasabi-credentials`*
+4. Connect with your cloud storage credentials. *LMEC credentials are stored in `Maps Center → GEOSPATIAL → wasabi-credentials`*
 
 5. You will see the file directory appear. Create a new folder with the atlas barcode, and upload the tiles and src folders from the hard drive for that atlas into this new folder.
 
@@ -652,7 +652,7 @@ When you have finished processing an atlas the backup file structure should look
 
 The Maps Center drive should be backed up only with the vector data that has resulted from this project. Any other files, especially imagery, should be cleaned out, after ensuring all of the imagery files are backed up in their proper locations.
 
-Footprints should be saved as geoJSONs. 
+Footprints should be saved as geoJSONs.
 
 
 **External Harddrive:**
@@ -664,6 +664,3 @@ All atlas data should be backed up here with the following structure:
 **Wasabi Cloud Storage:**
 
 ![wasabi](/media/img/wasabi.png)
-
-
-
