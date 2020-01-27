@@ -53,8 +53,6 @@ Each historical atlas included in Atlascope has a totally different geographic c
 
 For these reasons, no two atlases in our collection have identical coverages.
 
-In order to evade loosely defined and unreliable concepts like neighborhoods, Atlascope's search functionality is spatial. No matter where you are on the map, the app's layer menus will update to reflect only the atlas layers available for that location.
-
 > **As you move** around the map, the dropdown **menus** with available atlas layers **will change** and update to reflect what is available for that area.
 
 ![menu](/media/gifs/menu.gif)
@@ -85,7 +83,7 @@ Clicking on a suggested result will bring you to that location on the map, and a
 
 
 
-## Locate me 
+## Find me 
 
 Atlascope was designed to make exploring Boston  history easy and fun. It works well on an phone or tablet, and a "locate me" tool exists to situate yourself in history while you are moving about in the city.
 
@@ -219,7 +217,7 @@ This option will bring you to a page with only that atlas layer again, but this 
 
 This is generally the best way to find a specific plate in the digital collections, as this tool will remember where you were looking in Atlascope, and bring you right to that item in the digital collections. 
 
-1. After clicking "Find this plate in Digital Collections," click on the exact area you are looking for, and a popup should appear with bibliigraphic information.
+1. After clicking "Find this plate in Digital Collections," click on the exact area you are looking for, and a popup should appear with bibliographic information.
 
 2. At the bottom of the popup, click "View this plate in digital collections"
 
@@ -235,9 +233,9 @@ This is generally the best way to find a specific plate in the digital collectio
 
 ### Atlases not included in Atlascope {docsify-ignore}
 
-> While Atlascope includes an amazing number of atlases from the BPL collections covering Boston and surrounding towns, it does not include a significant portion of atlases available for research at the BPL.
-> 
-> - Atlases outside of Boston Proper for most towns in Massachusetts - *If you would like to donate to support adding these important resources to Atlascope, please contact us.*
+While Atlascope includes an amazing number of atlases from the BPL collections covering Boston and surrounding towns, it does not include a significant portion of atlases available for research at the BPL.
+> **Atlases not in Atlascope** <br>
+> - Atlases outside of Boston Proper for most towns in Massachusetts - *If you would like to support expanding the geography, please contact us.*
 >
 > - Atlases published after 1923 where rights are still retained by the copyright owner. This includes most of the twentieth-century Sanborns.
 
@@ -257,8 +255,8 @@ Though you cannot access these important archives in Atlascope or the digital co
 > The **BPL Urban Atlases Libguides** provide a comprehensive citation of every urban atlas available within the state of Massachusetts at the BPL.
 > 
 > Here we will describe how to use the libguides to determine the best way to access any given atlas, depending on the following factors:<br>
-> **→** Whether or not it has already been added to Atlascope <br>
 > **→** Whether or not it has been digitized and added to the Digital Collections and <br>
+> **→** Whether or not it has already been added to Atlascope <br>
 > **→**  Whether it is still under copyright and must be accessed in person.
 
 
@@ -287,21 +285,8 @@ For questions related to researching with the BPL holdings, please do not hesita
 ## All layers in Atlascope {docsify-ignore}
 
 Atlascope also provides a way to see all layers included in the app. 
-
-> **Zoom out on the map** by using your computer cursor, or by pinching the screen on your touch device. Eventually, the tiles will disappear, and polygon shapes representing each available atlas layer will appear.
-
-To return to a historical map layer, you have two options.
-
-1. Using the map interface to zoom back in on an area.
-
-![zoom all](/media/gifs/zoom-all.gif)
-
-2. From the polygon extent interface, expanding the "Choose an atlas..." menu to find a list of all available app layers.
-
-Selecting one of the list options will turn tiles on for that layer.
-
-![list](/media/gifs/list.gif)
-
+Try zooming far out on the map to see all of the layers available. 
+Select one from the dropdown menu to be brough to that atlas layer. 
 
 
 ## Mosaic links
