@@ -4,6 +4,8 @@ Exploring the vast collection of maps, geospatial data, and geographic informati
 
 These guides will serve as a homebase for our public instruction sessions, letting you know which programs are currently running or being developed, and providing a centralized location for all of the online materials that accompany the workshops. 
 
+
+
 ## Winter-Spring 2020 Curriculum {docsify-ignore}
 
 ### **Mapmaking 101: Introduction to Mapmaking** {docsify-ignore} <br> 
@@ -24,5 +26,17 @@ Mapmaking 101 is taught for those with no prior experience in digital mapping, t
 
 ## Schedule and Registration {docsify-ignore}
 
-We offer Mapmaking 101 roughly twice a month, and at least one other advanced course each month. For a current list of upcoming course offerings, check the guide pages for that offering, or our [calendar](https://www.leventhalmap.org/calendar "calendar"). Most courses are capped at a dozen participants, and pre-registration is opened several weeks in advanced through Eventbrite. Waiting lists are available for those who miss the initial registration limit. All of our regular instructional programs are free and open to the public. Unless otherwise noted, courses are offered in the instructional computer lab on the mezzanine level of the Johnson Building at the Central Library in Copley Square. Registration is for individual patrons; to inquire about a group visit, please email us at info@leventhalmap.org
+We offer Mapmaking 101 roughly twice a month, and at least one other advanced course each month. For a current list of upcoming course offerings, check the guide pages for that offering, or our [calendar](https://www.leventhalmap.org/calendar "calendar"). Most courses are capped at a dozen participants, and pre-registration is opened several weeks in advanced through Eventbrite. Waiting lists are available for those who miss the initial registration limit. All of our regular instructional programs are free and open to the public. 
 
+Unless otherwise noted, courses are offered in the instructional computer lab on the mezzanine level of the Johnson Building at the Central Library in Copley Square. Registration is for individual patrons; to inquire about a group visit, please email us at info@leventhalmap.org
+
+
+## About the Leventhal Map & Education Center  {docsify-ignore}
+The Norman B. **Leventhal Map and Education Center (LMEC)** at the Boston Public Library:
+- cares for the cartographic collections of the Boston Public Library
+- features exhibitions in its map gallery highlighting the collections and fostering spatial thinking and learning
+- provides educational programs and learning resources to students of all ages
+- creates and shares [free teaching resources](https://collections.leventhalmap.org/educators "Tools for teachers") for spatial thinking and learning in the classroom
+- provides study space - free and daily - in its Learning Center
+- makes all archival holdings [available for research](https://www.leventhalmap.org/research "Reference")   virtually or in person
+- supports geospatial learning by connecting you with data and tools for map making
