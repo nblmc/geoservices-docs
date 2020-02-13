@@ -1,6 +1,6 @@
 - [Home](/ "Geospatial @ LMEC") 
-- **<span style="color:purple">Guides</span>**
-  - [How to](/how-to/ "How To Guides")
-  - [Data](/data/ "Data help @ LMEC")
-  - [Workshops](/workshops/ "LMEC Workshops")
-  - [Discovery tools](/discovery-tools/  "Discovery tools")
+- **DOCUMENTATION CATEGORIES**
+  - [Geospatial Data](/data/ "Data help @ LMEC")
+  - [GIS Computing](/how-to/ "GIS Computing")
+  - [Workshops and Curriculum](/workshops/ "LMEC Workshops")
+  - [Discovery Tools](/discovery-tools/  "Discovery tools")

@@ -1,2 +1,3 @@
 - [Home](/ "Data Guides") 
-- **<span style="color:purple">DATA GUIDES</span>**
+- **[DATA GUIDES](/data/)**
+ - [Digitized Urban Atlases](/data/atlas-imagery.md "Raster Imagery for Urban Atlases")
