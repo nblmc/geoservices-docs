@@ -1,8 +1,6 @@
 # Using Digitized Urban Atlases as Data Sources
 
-## About Urban Atlases
-
-Info about atlases, atlascope, etc here ...
+Updated February 13, 2020 for MIT Fundamentals of Spatial Databases.
 
 ### Metadata and Object ID for Atlases
 
