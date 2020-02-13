@@ -60,11 +60,13 @@ An important factor to keep in mind when aggregating statistical figures to a ge
 
 !>  Under Geographic Levels, select **Census Tract**
 
-Our results have now been filtered down to a few hundred, rather than ten thousand.
+Our results have now been filtered down to a few hundred, rather than ten thousand. You will notice there are lots of different ways age demographic data is organized and categorized. The dataset we are looking for doesn't appear in our results until page 5.
 
 
+!>  Click through to page 5 of the results and find dataset "Population Under 18 Years by Age". 
 
 
+!>  Under Classifications, click **Age(8)**
 
 
 
