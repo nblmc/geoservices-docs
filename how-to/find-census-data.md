@@ -53,7 +53,7 @@ The final filter we wish to use is the "Geographic Levels" filter. This will det
 We are mapping Boston, so a good geographic unit to select is census tract. County-level data would not be specific enough to give us a meaningful understanding of geographic patterns. Most modern day data is available at the tract level, which is more specific than state or county. Some, but not all data is even available at the block-level!
 
 
-An important factor to keep in mind when aggregating statistical figures to a geographic area is the often arbitrary and sometimes intentional ways borders are defined, and how those choices can affect how we interpret the data. This problem is called the Modifiable Areal Unit Problem (MAUP), and is demonstrated in this graphic below:
+An important factor to keep in mind when aggregating statistical figures to a geographic area is the often arbitrary and sometimes intentional ways borders are defined, and how those choices can affect how we read the geographic distribution. This problem is called the Modifiable Areal Unit Problem (MAUP), and is demonstrated in this graphic below:
 
 ![maup](/media/img/maup.png)
 

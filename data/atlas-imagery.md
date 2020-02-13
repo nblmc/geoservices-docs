@@ -2,6 +2,8 @@
 
 ## About Urban Atlases
 
+*Updated February 13, 2020 for MIT Fundamentals of Spatial Databases.*
+
 The LMEC collection of fire insurance and real estate atlases of metropolitan Boston is in the process of being imaged, georeferenced, and mosaiced to produce continuous-coverage, geographically-locatable versions of these historic objects. 
 
 For more background on urban atlases, see the library research guides for [Boston](http://guides.bpl.org/urban-atlases) or [other Massachusetts cities and towns](https://guides.bpl.org/mass-urban-atlases). To learn more about the Atlascope public discovery tool, [read the documentation](/discovery-tools/atlascope) or [try the app](https://atlascope.leventhalmap.org).
