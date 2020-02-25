@@ -616,27 +616,27 @@ $ gdal2tiles.py -r cubic -p mercator -e -z 13-20 --processes=6 mosaic.tif tiles/
 
 # Sharing
 
-1. Open CyberDuck. (If not already installed, download and install [here](https://cyberduck.io/ "CyberDuck")
+Open the tiles folder in a new terminal.
 
-2. Click "Open Connection"
+Delete blank tiles by running this command:
 
-3. Select Amazon S3 in the dropdown menu
+```shell
+$ find . -type f -size -335c -delete
+```
+Once that has completed, upload tiles to Wasabi by running this command:
 
-4. Connect with your cloud storage credentials. *LMEC credentials are stored in `Maps Center → GEOSPATIAL → wasabi-credentials`*
+```shell
+$ for i in {13..20}; do cd $i; for f in *; do s3cmd put --recursive $f s3://urbanatlases/BARCODE/tiles/$i/; done; cd ../; done
+```
 
-5. You will see the file directory appear. Create a new folder with the atlas barcode, and upload the tiles and src folders from the hard drive for that atlas into this new folder.
+If s3cmd is not installed, you can do so by running `brew install s3cmd` and configuring our Wasabi credentials by following the steps [here](https://wasabi-support.zendesk.com/hc/en-us/articles/115001757791-How-do-I-use-s3cmd-with-Wasabi- "here")
 
-> Note: As the uploads are generally large, it works best to upload one set of tiles at a time.
 
-A transfer status dialog box will appear with feedback on the anticipated transfer time. When the tiles and source files have completed uploading, perform the following tasks to ensure tiles are discoverable: *These steps are specific to LMECs particular front-facing discovery environments.*
+From the Airtable, open the atlas "mosaic_URL" link. Check that high-quality tiles are appearing for the entire coverage extent of the atlas, at all desired zoom levels.
 
-6. From the Airtable, open the atlas "mosaic_URL" link. Check that high-quality tiles are appearing for the entire coverage extent of the atlas, at all desired zoom levels.
+When tiles have successfully uploaded to the cloud storage, download a copy of the "tiles" folder inside `CLIRSTORAGE/barcode` to back them up on the external hard drive, and delete the local copy created.
 
-7. When tiles have successfully uploaded to the cloud storage, download a copy of the "tiles" folder inside `CLIRSTORAGE/barcode` to back them up on the external hard drive, and delete the local copy created.
-
-7. Change the "status" field in the Airtable to **"Complete"**
-
-8. in #CLIR-general, post "x atlas is ready for libguide citation updates and ingest into app"
+To publish the atlas in Atlascope and populate the urban atlases libguide with updated information, follow the steps in `Maps Center Drive → Geospatial → handy-reference → internal-guides → publishing-atlases`
 
 # Backing up
 
