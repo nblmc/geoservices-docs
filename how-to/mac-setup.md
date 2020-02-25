@@ -46,32 +46,26 @@ macOS comes bundled with a preinstalled version of Python, currently 2.7.10. If 
 
 It's preferable to use Homebrew installed versions of Python for active development work, because you can then use Homebrew to install necessary Python packages, and anything else that you install with Homebrew will bind and compile against these versions of Python.
 
-Run the following to install a Homebrew Python 2 (the @ sign is used for specifying a release):
+**Update, February 2020**. Homebrew no longer supports Python 2, since Python 2 was officially [declared end-of-life](https://www.python.org/dev/peps/pep-0373/) as of January 1, 2020. Confusingly, the Homebrew package `python` installs the executable `python3`, and leaves the executable `python` pointing to the macOS preinstalled version of Python 2.
+
+Run the following to install a Homebrew Python 3:
 
 ```shell
-$ brew install python@2
+$ brew install python
 ```
 
-And then to install Python 3:
-
-```shell
-$ brew install python@3
-```
-
-Homebrew should also install corresponding versions of `pip` for you. To check that everything is correct, try the following commands, which should respond in this way:
+Homebrew should also install a corresponding versions of `pip3` for you. To check that everything is correct, try the following commands, which should respond in this way:
 
 ```shell
 $ which python
-> /usr/local/bin/python
-$ which pip
-> /usr/local/bin/pip
+> /usr/bin/python
 $ which python3
 > /usr/local/bin/python3
 $ which pip3
 > /usr/local/bin/pip3
 ```
 
-See how everything is in `/usr/local`? That's as it should be.
+See how the `python3` and `pip3` executables are in `/usr/local`? That's as it should be.
 
 ### A note about pip and Homebrew {docsify-ignore}
 
