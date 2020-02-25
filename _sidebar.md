@@ -1,5 +1,5 @@
-- [Home](/ "Geospatial @ LMEC") 
-- **DOCUMENTATION CATEGORIES**
+- [Home](/ "LMEC Documentation Base") 
+- **CATEGORIES**
   - [Geospatial Data](/data/ "Data help @ LMEC")
   - [GIS Computing](/how-to/ "GIS Computing")
   - [Workshops and Curriculum](/workshops/ "LMEC Workshops")

@@ -1,3 +1,3 @@
-- [Home](/ "Data Guides") 
+- [Home](/) 
 - **[DATA GUIDES](/data/)**
  - [Digitized Urban Atlases](/data/atlas-imagery.md "Raster Imagery for Urban Atlases")
