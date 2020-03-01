@@ -123,4 +123,5 @@ When the tool has finished running, the final, clipped data will be added to the
 The final version should resemble something like this:
 ![final](/media/img/final.png)
 
-*For questions related to geospatial data and mapping, please visit https://www.leventhalmap.org/research/geospatial-data/*
+
+*For questions related to geospatial data and mapping, please visit https://www.leventhalmap.org/research/gis/*
