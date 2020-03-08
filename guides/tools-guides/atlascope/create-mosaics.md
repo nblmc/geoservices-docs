@@ -101,21 +101,21 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 
 4.  Set the projection to WGS 84. At all times in the bottom right of the QGIS document, EPSG should read 4326. **Project → Properties → CRS WGS 84 - EPSG: 4326 → Apply** *Individual atlas plates georeferenced in WGS 84 are compatible with the BPL Map Warper overlay viewer embedded in the LMEC digital collections. You may consider using CRS WGS 84 / Pseudo Mercator - EPSG: 3857, if georeferencing only for the purpose of creating raster mosaics. Choosing at different projection at this step will require other tweaks to the workflow.*
 
-![Check projection](/media/img/proj-check.png)
+![Check projection](https://geoservices.leventhalmap.org/docs/media/img/proj-check.png)
 
 5. Open **Raster → Georeferencer** The Georeferencing plugin comes automatically installed with recent versions of QGIS. If you do not see it, it is because it has not been enabled. To enable: navigate to **Plugins → Manage & Install Plugins → Installed** and make sure the box next to **Georeferencer GDAL** is CHECKED
 
 6. Open the TIFF you wish to georeference in the georeferencer, by clicking the blue checkered add raster icon in the menu banner.<br>
-![Add raster](/media/img/add-raster.png)
+![Add raster](https://geoservices.leventhalmap.org/docs/media/img/add-raster.png)
 
 
 7. After you have added one of the TIFFs to the **GDAL Georeferencer**, click the Add Point button in the menu banner
-![Add point](/media/img/qgis-add-gcp.png)
+![Add point](https://geoservices.leventhalmap.org/docs/media/img/qgis-add-gcp.png)
 
 8. Choose a spot on the historical map for which you think you can find a corresponding modern location. Intersections are a good place to start, if they still exist!
 
 9. Choose to add the corresponding location **From Map Canvas**
-![From Map Canvas](/media/img/map-canvas.png)
+![From Map Canvas](https://geoservices.leventhalmap.org/docs/media/img/map-canvas.png)
 
 10. Find the location on the modern map
 
@@ -124,7 +124,7 @@ One should consider the data at hand -- if the maps requiring alignment have sta
 12. Add two more control points, so that there are three total, attempting to spread the gcps on opposite corners of the map.
 
 13. When there are three points, click the green **Start Georeferencing** button <br>
-![Start georeferencing](/media/img/start-geo.png)
+![Start georeferencing](https://geoservices.leventhalmap.org/docs/media/img/start-geo.png)
 
 14. The transformation settings will open. Select the following options:
 
@@ -150,7 +150,7 @@ One should consider the data at hand -- if the maps requiring alignment have sta
     3. Make sure that the file exported has the correct **identifier**.tif naming convention and is saved in a folder in the working atlas directory titled "spatial_imagery"
 
 18. When the final TIFF file has been georeferenced in a satisfactory manner and exported, navigate to the `spatial_imagery` folder. Open the .txt file in a text editor to ensure that the points are saving correctly. <br><br>
-![GCPs example](/media/img/gcps-example.png)
+![GCPs example](https://geoservices.leventhalmap.org/docs/media/img/gcps-example.png)
 
 19. Drag the .txt gcp file from `spatial_imagery` into a newly created folder in the working directory at the atlas root level titled `gcps`
 
@@ -198,14 +198,14 @@ This section of the guide describes how to import an existing gcp .txt file rath
     1. **File → Load GCP Points**
 
     2. Menu icon <br>
-    ![Import gcps](/media/img/import-gcps.png)
+    ![Import gcps](https://geoservices.leventhalmap.org/docs/media/img/import-gcps.png)
 
     3. Keyboard shortcut ⌘ L
 
 When the file search window opens, navigate to the correct .txt file
 
 6. Select **Start Georeferencing** <br>
-![Start georeferencing](/media/img/start-geo.png)
+![Start georeferencing](https://geoservices.leventhalmap.org/docs/media/img/start-geo.png)
 
 7. The transformation settings will open. Select the following options:
 
@@ -292,7 +292,7 @@ Broadly, this is accomplished by:
 - Make sure snapping is set to **Vertex and Segment**, and **Topological Editing and Snapping on Intersection** are **enabled**
 Project → Snapping options
 
-![Snapping](/media/img/snapping.png)
+![Snapping](https://geoservices.leventhalmap.org/docs/media/img/snapping.png)
 
 - The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features.
 
@@ -303,14 +303,14 @@ Project → Snapping options
 **EDITING TOOLS OVERVIEW**
 
 - Vertex tool  (click, move mouse to new location, click) moves an already existent “node” <br>
-![Vertex tool](/media/img/vertex.png)
+![Vertex tool](https://geoservices.leventhalmap.org/docs/media/img/vertex.png)
 
 - Double-clicking on a line will allow the creation of a new vertex
 
 - Holding down the space bar will temporarily allow you to pan around
 
 - This info button will tell you which plate the boundary refers to (make sure index layer is highlighted in layer list) <br>
-![Start georeferencing](/media/img/info.png)
+![Start georeferencing](https://geoservices.leventhalmap.org/docs/media/img/info.png)
 
 - Select a vertex & press the delete key to delete
 
@@ -366,7 +366,7 @@ Once each feature has been edited appropriately, this layer will be exported and
 2. Make sure snapping is set to **Vertex and Segment**, and **Topological Editing and Snapping on Intersection** are **enabled**
 Project → Snapping options
 
-![Snapping](/media/img/snapping.png)
+![Snapping](https://geoservices.leventhalmap.org/docs/media/img/snapping.png)
 
 
 - The option enable topological editing is for editing and maintaining common boundaries in features mosaics. QGIS ‘detects’ shared boundary by the features, so you only have to move a common vertex/segment once, and QGIS will take care of updating the neighboring features.
@@ -389,7 +389,7 @@ Make sure the correct file is selected; all other options can be left at default
 If all features are included in the Valid Output file, proceed. If any features are included in the Invalid Output file, correct the geometry before proceeding. (Refer to correct snapping settings to ensure you are creating polygons with no overlapping geometry)
 
 **Example of successful validity check:**
-![check-validity](/media/gif/check-validity.gif)
+![check-validity](https://geoservices.leventhalmap.org/docs/media/gif/check-validity.gif)
 
 ### Joining metadata {docsify-ignore}
 
@@ -479,7 +479,7 @@ If all features are included in the Valid Output file, proceed. If any features 
 7. Click **pencil → Do you want to save your changes → YES**
 
 8. Open attribute table to ensure fields are named properly <br>
-![Boundary.shp fields](/media/img/fields.png)
+![Boundary.shp fields](https://geoservices.leventhalmap.org/docs/media/img/fields.png)
 
 9. **Right-click Boundary file → Export → Save Features As**
 
@@ -608,7 +608,7 @@ $ gdal2tiles.py -r cubic -p mercator -e -z 13-20 --processes=6 mosaic.tif tiles/
 10. When the tiles have completed, expand the **tiles** directory folder on the hard drive and take note of the auto-generated .html pages. Previewing these pages is a helpful way to ensure the tiles were generated correctly. Open **leaflet.html** in a browser, and ensure the imagery was cached correctly.
 
 > Note: The default opacity value in the auto-generated leaflet.html page is not full opacity, which can hinder the ability to check image quality of the tiles. To increase opacity of the tiles for proper preview, open leaflet.html in a text editor and change `opacity: 0.7` to `opacity: 1` in the line below. <br>
-![Opacity default](/media/img/opacity-default.png)
+![Opacity default](https://geoservices.leventhalmap.org/docs/media/img/opacity-default.png)
 
 
 
@@ -646,9 +646,9 @@ When you have finished processing an atlas the backup file structure should look
 
 `Maps Center → GEOSPATIAL →  urban-atlases →  barcode`
 
-![M drive backup footprint](/media/img/mdrivebackup.png)
+![M drive backup footprint](https://geoservices.leventhalmap.org/docs/media/img/mdrivebackup.png)
 
-![M drive backup gcps](/media/img/mdrivegcps.png)
+![M drive backup gcps](https://geoservices.leventhalmap.org/docs/media/img/mdrivegcps.png)
 
 The Maps Center drive should be backed up only with the vector data that has resulted from this project. Any other files, especially imagery, should be cleaned out, after ensuring all of the imagery files are backed up in their proper locations.
 
@@ -659,8 +659,8 @@ Footprints should be saved as geoJSONs.
 
 All atlas data should be backed up here with the following structure:
 
-![clirstorage](/media/img/clirstorage.png)
+![clirstorage](https://geoservices.leventhalmap.org/docs/media/img/clirstorage.png)
 
 **Wasabi Cloud Storage:**
 
-![wasabi](/media/img/wasabi.png)
+![wasabi](https://geoservices.leventhalmap.org/docs/media/img/wasabi.png)

@@ -1,6 +1,6 @@
 # Setting up a Mac for geospatial computing
 
-## Installing Homebrew
+## Installing Homebrew {docsify-ignore}
 
 **Homebrew** is a *package manager* for macOS—a system for installing, upgrading, and uninstalling *packages* and their *dependencies*. Anything that you install with Homebrew you could, if you wanted to, install by hand, but you'd have a real headache making sure everything was in the correct place. For instance, the `gdal` package has about two dozen dependencies, like `proj`, `libgeotiff`, and so on, which you'd have to make sure were in place for `gdal` to access. Homebrew does all this for you (or, at least it does most of the time).
 
@@ -40,7 +40,7 @@ $ brew upgrade [package]
 
 
 
-## Installing Homebrew's Python
+## Installing Homebrew's Python {docsify-ignore}
 
 macOS comes bundled with a preinstalled version of Python, currently 2.7.10. If you run `which python` from the Terminal, you should get `/usr/bin/python`, which is the preinstalled Python; try `python --version` to check which version this is.
 
@@ -71,7 +71,7 @@ See how the `python3` and `pip3` executables are in `/usr/local`? That's as it s
 
 There are some Python packages which can be installed by *both* pip and Homebrew. In most cases, it's better to install via Homebrew, though, if you're finding that you only have a package installed for Python 2 or Python 3, you can try also installing with pip.
 
-## Installing geospatial packages
+## Installing geospatial packages {docsify-ignore}
 
 Homebrew has several hundred packages (called *formulae*) that it knows how to install on its own; see <https://formulae.brew.sh/formula/> for a list.
 
@@ -99,7 +99,7 @@ These packages are useful for Python processing. You should install with `pip` o
 - `fiona`
 - `geopandas`
 
-## Installing QGIS
+## Installing QGIS {docsify-ignore}
 
 There are two ways to get QGIS on a Mac: installing the app bundle, or installing via Homebrew. The advantage to installing the app bundle is that it behaves much more like a normal Mac app, and is self-contained. The disadvantage is that the app bundle contains its own versions of libraries like `proj`, `gdal`, and so on, which means you're both installing duplicate versions of these libraries, and will also have difficulty accessing those libraries from *outside* of the app bundle. The advantage of installing QGIS from Homebrew is that it builds against the Homebrew-installed versions of these libraries, and therefore keeps all your geospatial software within one ecosystem. However, the Homebrew formula for QGIS is also more fragile, and, if you update one of the dependencies at a time when the Homebrew QGIS formula isn't yet ready for those newer versions of the dependencies, you'll break QGIS.
 

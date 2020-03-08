@@ -27,7 +27,7 @@ Let's start with the filter "Topics".
 
 !>  Select Topics from the filter menu. 
 
-![topics](/media/gif/topics.gif)
+![topics](https://geoservices.leventhalmap.org/docs/media/gif/topics.gif)
 
 !>  We are interested in age, so select **Age** under **Core Demographics**, by clicking the green plus sign. 
 
@@ -55,7 +55,7 @@ In this example, we are mapping Boston, so a good geographic unit to select is c
 
 An important factor to keep in mind when aggregating statistical figures to a geographic area is the often arbitrary and sometimes intentional ways borders are defined, and how those choices can affect how we read the geographic distribution. This problem is called the Modifiable Areal Unit Problem (MAUP), and is demonstrated in this graphic below:
 
-![maup](/media/img/maup.png)
+![maup](https://geoservices.leventhalmap.org/docs/media/img/maup.png)
 
 This graphic depicts how, depending on where the boundary line is drawn, singular occurrences of a phenomenon are grouped together differently, changing our visual reading of any given area's percentage or proportion of the phenomenon at hand. 
 
@@ -77,7 +77,7 @@ You can learn more about each dataset's classfication by clicking on the variabl
 
 !>  Under Classifications, click **Age(8)**
 
-![age](/media/img/age.png)
+![age](https://geoservices.leventhalmap.org/docs/media/img/age.png)
 
 
 Upon clicking on the age variable's classification breakdown, the data appears to be categorized into age brackets: under 3 years, 3-4 years, 5 years, 6-8 years, 9-11 years, and so on. This looks promising. Let's download this dataset.
@@ -88,11 +88,11 @@ Upon clicking on the age variable's classification breakdown, the data appears t
 Your "cart" in the upper right-hand corner of the webpage will now reflect that you have added one source table.
 
 
-![cart](/media/img/cart.png)
+![cart](https://geoservices.leventhalmap.org/docs/media/img/cart.png)
 
 Remember, whatever statistical demographic information we are "checking out" is just that -- a table of figures. In order to connect this information with geography, we will need to also download a geography file at the proper unit (tract, county, state, etc.), and combine the two together, after we have downloaded them. 
 
-![no-gis](/media/img/no-gis.png)
+![no-gis](https://geoservices.leventhalmap.org/docs/media/img/no-gis.png)
 
 
 Normally, GIS files at the geographic unit we have selected will appear under the tab "GIS Files". Right now, it is telling us that there are 0 GIS Files.
@@ -103,14 +103,14 @@ The reason no GIS files are appearing is because we have selected a non-decennia
 
 The GIS Files tab should now have two listings
 
-![years](/media/img/years.png)
+![years](https://geoservices.leventhalmap.org/docs/media/img/years.png)
 
 
 !>  Add the first record to your cart, the one that uses the 2010 TIGER/Line as its basis
 
 Your cart should now list 1 Source Table and 1 GIS File
 
-![checkout cart](/media/img/cart2.png)
+![checkout cart](https://geoservices.leventhalmap.org/docs/media/img/cart2.png)
 
 !>  Inside the data cart, select **Continue**
 
@@ -130,7 +130,7 @@ Once you have created your account and the data request has been processed (it t
 
 You will know it is done when **tables** and **gis** appear with a file size. 
 
-![extract](/media/img/extract.png)
+![extract](https://geoservices.leventhalmap.org/docs/media/img/extract.png)
 
 !>  Click on each of the files, **tables** and **gis** separately to initiate the download
 
