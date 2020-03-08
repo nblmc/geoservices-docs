@@ -3,7 +3,7 @@
 
 # How to find and use US census data
 
-## Overview
+## Overview {docsify-ignore}
 By the end of this tutorial, you will have learned:
 
 - How to search for and download census data compatible with mapping
@@ -20,7 +20,7 @@ The NHGIS portal is formatted like an online shopping cart. You will narrow down
 
 You will want to use at least the top 3 filters, "Geographic Levels," "Years," and "Topics" to narrow down your data. The next section of this tutorial will describe how to use these filters.
 
-## Data Filters
+## Data Filters {docsify-ignore}
 In this tutorial, we will be looking for the most recent youth population data available for Boston.
 
 Let's start with the filter "Topics". 
@@ -142,7 +142,7 @@ The "shape" or geography files are often double-zipped. You will need to unzip t
 
 !>  Double-click the newly-extracted "nhgis0020_shape" folder. There will be another zipped folder inside, titled "nhgis0020_shapefile_tl2010_us_tract_2010". Right-click > extract or unzip this folder
 
-## Data Codebook
+## Data Codebook {docsify-ignore}
 
 Let's take a look at the data we have downloaded, and clean it up a bit before bringing it into GIS software. 
 
@@ -173,7 +173,7 @@ Luckily, NHGIS is a high-quality data provider, and includes extensive documenta
 !> Double-click the downloaded file ending with "_codebook.txt" to open it. 
 
 
-## GIS Join
+## GIS Join {docsify-ignore}
 To work with this data, we will use QGIS, a free & open geospatial software. 
 
 !> Open QGIS. If you do not already have QGIS, download it [here](https://qgis.org/en/site/forusers/download.html "QGIS download")
