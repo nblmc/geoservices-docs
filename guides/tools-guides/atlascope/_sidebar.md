@@ -1,3 +1,4 @@
 - [Home](/ "Atlascope guides") 
 - **[atlascope guides](/guides/tools-guides/atlascope)**
   - [How to create atlas <br> mosaics at your library](/guides/tools-guides/atlascope/create-mosaics.md "Atlascope")
+  - [How to use Atlascope to find <br> BPL source materials](/guides/tools-guides/atlascope/digital-collections.md "Atlascope")

@@ -3,7 +3,7 @@
 <br>
 
 <div class = "suggestions">
-<p>testttt</p>
+
 
 <div id = "for-mapmakers">
 <h3>Mapmakers</h3>
@@ -17,40 +17,15 @@
 
 
 <div id = "for-librarians">
-    <h3>Librarians</h3>
+<h3>Librarians</h3>
+<h4>Atlascope</h4>
+<p><a href="#/guides/tools-guides/atlascope/create-mosaics">How do I make atlas mosaics? →</a></p>   
+<p><a href="#/guides/tools-guides/atlascope/digital-collections">How do I find individual atlas pages in the digital collections? →</a></p>  
 </div>
 
 </div>
 
 
-<!-- <div class="frontpage-for-box need-data">
-<h3>Do you need data for a project?</h3>
-<p><a href="#/how-to/find-census-data">Find and use Census data →</a></p>
-<p><a href="#/how-to/clip-by-extent">Learn how to clip a data set by geography →</a></p>
-
-</div>
-
-<div class="frontpage-for-box help-map">
-<h3>Do you need help making a map?</h3>
-<p><a href="#/workshops/map101">Read the syllabus for Mapmaking 101 →</a></p>
-</div>
-
-<div class="frontpage-for-box app-help">
-<h3>Do you need help using Map Center geospatial apps?</h3>
-<p><a href="#/discovery-tools/atlascope">Read the documentation for Atlascope →</a></p>
-</div>
-
-<div class="frontpage-for-box gis-experience">
-<h3>Are you a GIS expert looking for APIs, metadata, and geocomputation?</h3>
-<p><a href="#/data/atlas-imagery">Get imagery and metadata for digitized atlases →</a></p>
-<p><a href="#/how-to/mac-setup">Tips for setting up a Mac using open source geospatial software →</a></p>
-</div>
-
-<div class="frontpage-for-box librarian">
-<h3>Are you a librarian?</h3>
-<p><a href="#/how-to/create-mosaics">Read the documentation for transforming digitized atlas collections into web maps →</a></p>
-<p>Use Atlascope for fielding genealogy and urban history reference requests <span class="coming-soon">coming soon</span></a></p>
-</div> -->
 
 <div class="lmec-header" 
 <h1>Ask us anything  👇 </h1></div>

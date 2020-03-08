@@ -17,7 +17,10 @@
 
 
 <div id = "for-librarians">
-    <h3>Librarians</h3>
+<h3>Librarians</h3>
+<h4>Atlascope</h4>
+<p><a href="#/guides/tools-guides/atlascope/create-mosaics">How do I make atlas mosaics? →</a></p>   
+<p><a href="#/guides/tools-guides/atlascope/digital-collections">How do I find individual atlas pages in the digital collections? →</a></p>  
 </div>
 
 </div>
