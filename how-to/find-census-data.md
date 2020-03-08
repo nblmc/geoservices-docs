@@ -97,7 +97,7 @@ Remember, whatever statistical demographic information we are "checking out" is 
 
 Normally, GIS files at the geographic unit we have selected will appear under the tab "GIS Files". Right now, it is telling us that there are 0 GIS Files.
 
-The reason no GIS files are appearing is because we have selected a non-decennial year, 2018. While American Community Survey (ACS) data is being constantly collected, boundaries are updated every ten years. ACS data are aggregated to the most recent decennial geography. That means we will need to change our **year** filter to 2010 in order to obtain a correct census tract file to join our statistical information with. 
+The reason no GIS files are appearing is because we have selected a non-decennial year, 2018. While American Community Survey (ACS) data is being constantly collected, they are aggregated to the most recent decennial geography, which is only updated every ten years. That means we will need to change our **year** filter to 2010 in order to obtain a correct census tract file to join our statistical information with. 
 
 !>  Change the **Years** filter to **2010**
 
