@@ -1,6 +1,5 @@
 - [Home](/ "LMEC Documentation Base") 
 - **CATEGORIES**
-  - [Geospatial Data](/data/ "Data help @ LMEC")
-  - [GIS Computing](/how-to/ "GIS Computing")
-  - [Workshops and Curriculum](/workshops/ "LMEC Workshops")
-  - [Discovery Tools](/discovery-tools/  "Discovery tools")
+  - [Tutorials | How-Tos](/guides/ "LMEC tutorials and how-to guides")
+  - [Workshops | Curriculum](/workshops/ "LMEC curriculum and workshops")
+  - [Documentation](/documentation/ "LMEC documentation")

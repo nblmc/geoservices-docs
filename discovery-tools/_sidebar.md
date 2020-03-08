@@ -1,3 +1,0 @@
-- [Home](/ "Discovery Tools Guide") 
-- **[Discovery Tools](/discovery-tools/)**
-  - [Atlascope User Manual](/discovery-tools/atlascope.md "Atlascope User Manual")
