@@ -55,7 +55,7 @@ For these reasons, no two atlases in our collection have identical coverages.
 
 > **As you move** around the map, the dropdown **menus** with available atlas layers **will change** and update to reflect what is available for that area.
 
-![menu](/media/gifs/menu.gif)
+![menu](https://geoservices.leventhalmap.org/docs/media/gif/menu.gif)
 
 
 As you move out of the range of one atlas, the app will automatically suggest the oldest atlas layer available for the new map location.
@@ -115,7 +115,7 @@ This mode provides a neat way to "peer through" the baselayer to whichever atlas
 
 We tend to think of `Glass mode` as a rather convenient way to use Atlascope, because of the ability to increase or decrease the size of the glass, allowing for a more fine-tuned comparison between the base and overlay map.
 
-![glass](/media/gifs/glass.gif)
+![glass](https://geoservices.leventhalmap.org/docs/media/gif/glass.gif)
 
 
 ### swipe
@@ -124,7 +124,7 @@ Another mode available is `Swipe mode`.
 
 You can change the direction of the swipe by toggling between `Swipe Y` and `Swipe X` in the app menu controls.
 
-![swipe](/media/gifs/swipe.gif)
+![swipe](https://geoservices.leventhalmap.org/docs/media/gif/swipe.gif)
 
 
 
@@ -136,7 +136,7 @@ The final available overlay mode is `Opacity mode`.
 
 In addition to using the range slider to gradually increase or decrease opacity, try selecting "0" or "100" on either end of the slider to quickly toggle the overlay off and on.
 
-![opacity](/media/gifs/opacity.gif)
+![opacity](https://geoservices.leventhalmap.org/docs/media/gif/opacity.gif)
 
 
 
@@ -149,15 +149,15 @@ Let's compare a few blocks in South Boston between 1885 and 1891...
 
 In `Glass mode`
 
-![compare glass](/media/gifs/compare-glass.gif)
+![compare glass](https://geoservices.leventhalmap.org/docs/media/gif/compare-glass.gif)
 
 In `Swipe mode`
 
-![compare swipe](/media/gifs/compare-swipe.gif)
+![compare swipe](https://geoservices.leventhalmap.org/docs/media/gif/compare-swipe.gif)
 
 In `Opacity mode`
 
-![compare opacity](/media/gifs/compare-opacity.gif)
+![compare opacity](https://geoservices.leventhalmap.org/docs/media/gif/compare-opacity.gif)
 
 
 
