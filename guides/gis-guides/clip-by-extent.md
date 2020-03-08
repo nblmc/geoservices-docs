@@ -49,12 +49,12 @@ and then selecting "Download" <br>
 1. Open QGIS. If you do not already have QGIS, download it [here](https://qgis.org/en/site/forusers/download.html "QGIS download")
 
 2. Bring both datasets into the program. You can import data by using the [import data](https://guides.library.duke.edu/QGIS/ImportData "import data qgis") menu, or by simply dragging the file with the .shp extension into QGIS.
-![Add data to QGIS](https://geoservices.leventhalmap.org/docs/media/gif/mybinder_demo.gifadd-data.gif)
+![Add data to QGIS](https://geoservices.leventhalmap.org/docs/media/gif/add-data.gif)
 
 You will notice that the STRUCTURES_POLY file (buildings) takes a long time to fully load. This is part of the reason we want to clip it. For now, you can uncheck STRUCTURES_POLY in your layer list. We are going to work with the neighborhood file first.
 
 3. Uncheck STRUCTURES_POLY in the layer list, temporarily turning off the buildings layer.
-![Turn off layer](https://geoservices.leventhalmap.org/docs/media/gif/mybinder_demo.gifturn-off-layer.gif)
+![Turn off layer](https://geoservices.leventhalmap.org/docs/media/gif/turn-off-layer.gif)
 
 
 Before we are able to clip the building layer, we will need to create a clipping layer to do so.
@@ -66,7 +66,7 @@ This process can be repeated with many different clipping geographies. You will 
 To begin isolating JP, let's observe the neighborhood data's attribute table.
 
 4. Open the attribute table by right-clicking on the neighborhood layer in the layers list, and selecting **"Open Attribute Table"**
-![Open attribute table](https://geoservices.leventhalmap.org/docs/media/gif/mybinder_demo.gifopen-attribute-table.gif)
+![Open attribute table](https://geoservices.leventhalmap.org/docs/media/gif/open-attribute-table.gif)
 
 5. Highlight the row representing Jamaica Plain by clicking on the number to the far left of the record (in this case, 18). When the record is properly selected, Jamaica Plain will appear to be highlighted in the map:
 ![highlight](https://geoservices.leventhalmap.org/docshttps://geoservices.leventhalmap.org/docs/media/img/highlight.png)
@@ -88,7 +88,7 @@ To begin isolating JP, let's observe the neighborhood data's attribute table.
 ![add to map](https://geoservices.leventhalmap.org/docshttps://geoservices.leventhalmap.org/docs/media/img/add-to-map.png)
 
 10. Once your new layer appears in the map, you can remove the layer with all of the Boston neighborhoods by right-clicking on it in the layer list, and selecting **"Remove Layer"**
-![remove layer](https://geoservices.leventhalmap.org/docs/media/gif/mybinder_demo.gifremove-layer.gif)
+![remove layer](https://geoservices.leventhalmap.org/docs/media/gif/remove-layer.gif)
 
 ## Clip data by new extent {docsify-ignore}
 
