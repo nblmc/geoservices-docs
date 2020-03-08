@@ -47,7 +47,7 @@ There are two main ways to search in Atlascope:
 
 Each historical atlas included in Atlascope has a totally different geographic coverage from all the others. This is because the atlases were created separately for different regions, and were published at a time when Boston's urban landscape was developing rapidly. 
 
-![atlases](https://geoservices.leventhalmap.org/docs/#/media/img/atlases.png)
+![atlases](https://geoservices.leventhalmap.org/docs/media/img/img/atlases.png)
 
 *Pictured above: Geographic extent snapshot of atlases available in Atlascope*
 
@@ -72,11 +72,11 @@ Here are the steps to search for a modern-day address:
 
 
 
-![search menu](https://geoservices.leventhalmap.org/docs/#/media/img/menu-search.png)
+![search menu](https://geoservices.leventhalmap.org/docs/media/img/img/menu-search.png)
 
 You can search for either modern street addresses or the names of businesses. If the search recognizes your query, a suggested result will appear.
 
-![search business](https://geoservices.leventhalmap.org/docs/#/media/img/business.png)
+![search business](https://geoservices.leventhalmap.org/docs/media/img/img/business.png)
 
 Clicking on a suggested result will bring you to that location on the map, and also turn on imagery for that location.
 
@@ -167,7 +167,7 @@ In `Opacity mode`
 To share a link to the whole app, or a specific view/location, following these steps:
 
 1. Click the Share button in the upper-right hand corner <br>
-![share](https://geoservices.leventhalmap.org/docs/#/media/img/share.png)
+![share](https://geoservices.leventhalmap.org/docs/media/img/img/share.png)
 
 2. Select the appropriate share option: 
 - Share the app
@@ -192,17 +192,17 @@ In this guide you will learn how to use Atlascope to quickly find atlas plates i
 4. From the app layer controls, select "About this map"
 5. Observe the bibliographic information for this volume, and options for finding this resource in the library collections.
 
-![collections options](https://geoservices.leventhalmap.org/docs/#/media/img/dc.png)
+![collections options](https://geoservices.leventhalmap.org/docs/media/img/img/dc.png)
 
 #### View plate boundaries and atlas extent {docsify-ignore}
 
 This option will take you to a page displaying only the layer for the one atlas volume you have selected, and a blue/green outline showing which coverage each page represents. 
 
-![extent](https://geoservices.leventhalmap.org/docs/#/media/img/extent.png)
+![extent](https://geoservices.leventhalmap.org/docs/media/img/img/extent.png)
 
 When you click on a page boundary, a popup will appear with bibliographic information about that atlas plate, including the digital collections identifier #, and a link to the item in the digital collections.
 
-![popup](https://geoservices.leventhalmap.org/docs/#/media/img/popup.png)
+![popup](https://geoservices.leventhalmap.org/docs/media/img/img/popup.png)
 
 
 #### View list of plates in the Digital Collections {docsify-ignore}
@@ -298,7 +298,7 @@ This section of the guide will give instructions on how to bring in the mosaic o
 
 The tiles for each volume are accessible by selecting `About this map` and then copying the link under `XYZ Tile Endpoint`
 
-![tiles](https://geoservices.leventhalmap.org/docs/#/media/img/tiles.png)
+![tiles](https://geoservices.leventhalmap.org/docs/media/img/img/tiles.png)
 
 This link can be brought into any geospatial software -- desktop software like ArcMap, ArcGIS Pro, and QGIS, cloud mapping platforms like ArcGIS Online, Carto and Google Maps, and you can even use them to build your own Javascript web apps, like we did with Atlascope!
 
