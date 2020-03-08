@@ -33,13 +33,13 @@ For this task, two datasets are required:
 1). Navigate to each dataset's webpage in a new tab: [buildings](https://docs.digital.mass.gov/dataset/massgis-data-building-structures-2-d "MassGIS building footprint dataset record") | [neighborhoods](https://data.boston.gov/dataset/boston-neighborhoods "Analyze Boston neighborhood dataset record")
 
 2. Download the Massachusetts Building Footprints by clicking "Shapefile"
-![download buildings](https://geoservices.leventhalmap.org/docs/#/media/pngdownload-buildings.png)
+![download buildings](https://geoservices.leventhalmap.org/docs/media/png/download-buildings.png)
 
 3. Download the Neighborhood boundaries on the Analyze Boston page by also clicking "Shapefile"
-![download neighborhoods](https://geoservices.leventhalmap.org/docs/#/media/pngdownload-neighborhoods.png)
+![download neighborhoods](https://geoservices.leventhalmap.org/docs/media/png/download-neighborhoods.png)
 
 and then selecting "Download" <br>
-![Analyze Boston download button](https://geoservices.leventhalmap.org/docs/#/media/pngdownload-ab.png)
+![Analyze Boston download button](https://geoservices.leventhalmap.org/docs/media/png/download-ab.png)
 
 4. Unzip or uncompress both of the zip files, saving them either in your downloads folder or somewhere else you can easily access them.
 
@@ -49,12 +49,12 @@ and then selecting "Download" <br>
 1. Open QGIS. If you do not already have QGIS, download it [here](https://qgis.org/en/site/forusers/download.html "QGIS download")
 
 2. Bring both datasets into the program. You can import data by using the [import data](https://guides.library.duke.edu/QGIS/ImportData "import data qgis") menu, or by simply dragging the file with the .shp extension into QGIS.
-![Add data to QGIS](geoservices-docs/media/gif/add-data.gif)
+![Add data to QGIS](https://geoservices.leventhalmap.org/docs/media/gif/add-data.gif)
 
 You will notice that the STRUCTURES_POLY file (buildings) takes a long time to fully load. This is part of the reason we want to clip it. For now, you can uncheck STRUCTURES_POLY in your layer list. We are going to work with the neighborhood file first.
 
 3. Uncheck STRUCTURES_POLY in the layer list, temporarily turning off the buildings layer.
-![Turn off layer](geoservices-docs/media/gif/turn-off-layer.gif)
+![Turn off layer](https://geoservices.leventhalmap.org/docs/media/gif/turn-off-layer.gif)
 
 
 Before we are able to clip the building layer, we will need to create a clipping layer to do so.
@@ -66,15 +66,15 @@ This process can be repeated with many different clipping geographies. You will 
 To begin isolating JP, let's observe the neighborhood data's attribute table.
 
 4. Open the attribute table by right-clicking on the neighborhood layer in the layers list, and selecting **"Open Attribute Table"**
-![Open attribute table](geoservices-docs/media/gif/open-attribute-table.gif)
+![Open attribute table](https://geoservices.leventhalmap.org/docs/media/gif/open-attribute-table.gif)
 
 5. Highlight the row representing Jamaica Plain by clicking on the number to the far left of the record (in this case, 18). When the record is properly selected, Jamaica Plain will appear to be highlighted in the map:
-![highlight](https://geoservices.leventhalmap.org/docs/#/media/pnghighlight.png)
+![highlight](https://geoservices.leventhalmap.org/docs/media/png/highlight.png)
 
 6. Close out of the attribute table by clicking the red x at the top of the attribute table window.
 
 7. To export only selected features and save them to a new dataset, right-click the layer (Boston neighborboods) in the layer list, and select `Export → Save Selected Features As`
-![export selected](https://geoservices.leventhalmap.org/docs/#/media/pngexport-selected.png)
+![export selected](https://geoservices.leventhalmap.org/docs/media/png/export-selected.png)
 
 8. Select the following options
 
@@ -82,13 +82,13 @@ To begin isolating JP, let's observe the neighborhood data's attribute table.
 > **Export location:** Use the ... ellipses icon to indicate where you want to save the export. As this clipping feature is temporary (a means to an end), we are keeping in our downloads folder, and not saving it anywhere more meaningful. <br>
 > **Projection:** This will be specific to your project. We are sticking with the projection the data arrived in, WGS 84.
 
-![save](https://geoservices.leventhalmap.org/docs/#/media/pngsave.png)
+![save](https://geoservices.leventhalmap.org/docs/media/png/save.png)
 
 9. Keep "Add saved file to map" CHECKED <br>
-![add to map](https://geoservices.leventhalmap.org/docs/#/media/pngadd-to-map.png)
+![add to map](https://geoservices.leventhalmap.org/docs/media/png/add-to-map.png)
 
 10. Once your new layer appears in the map, you can remove the layer with all of the Boston neighborhoods by right-clicking on it in the layer list, and selecting **"Remove Layer"**
-![remove layer](geoservices-docs/media/gif/remove-layer.gif)
+![remove layer](https://geoservices.leventhalmap.org/docs/media/gif/remove-layer.gif)
 
 ## Clip data by new extent
 
@@ -100,11 +100,11 @@ Rather than clip the input data to the exact extent of the masking layer, we pro
 
 
 1). Select **Processing → Toolbox** <br><br>
-![toolbox](https://geoservices.leventhalmap.org/docs/#/media/pngtoolbox.png)
+![toolbox](https://geoservices.leventhalmap.org/docs/media/png/toolbox.png)
 
 
 2). Select **Vector Selection → Extract by location** <br><br>
-![extract by location](https://geoservices.leventhalmap.org/docs/#/media/pngextract-location.png)
+![extract by location](https://geoservices.leventhalmap.org/docs/media/png/extract-location.png)
 
 3). Select the following settings:
 
@@ -121,7 +121,7 @@ When the tool has finished running, the final, clipped data will be added to the
 4). Select **close** on the extract by location window to return to your map, and explore the new data you created to ensure the desired result has been accomplished.
 
 The final version should resemble something like this:
-![final](https://geoservices.leventhalmap.org/docs/#/media/pngfinal.png)
+![final](https://geoservices.leventhalmap.org/docs/media/png/final.png)
 
 
 *For questions related to geospatial data and mapping, please visit https://www.leventhalmap.org/research/gis/*
