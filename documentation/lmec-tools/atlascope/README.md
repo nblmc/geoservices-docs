@@ -18,7 +18,7 @@
 <br>
 <h4>Learning GIS</h4>
 <p><a href="#/guides/gis-guides/">LMEC GIS tutorial topics →</a></p>
-<p><a href="#/workshops/">How do I log in to Lynda with my BPL card? →</a></p>
+<p><a href="https://my.nicheacademy.com/bostonpublic/course/1399">How do I log in to Lynda with my BPL card? →</a></p>
 </div>
 
 
