@@ -35,7 +35,7 @@ for layer in [layer for layer in QgsProject.instance().mapLayers().values()]:
 ```
 # File structure
 
-![file structure](#/docs/media/img/data-structure.png)
+![file structure](https://geoservices.leventhalmap.org/docs/media/img/data-structure.png)
 
 
 # Georeferencing
