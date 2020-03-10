@@ -113,7 +113,6 @@ To ensure a feature exists for every spatial image in the volume, you can use [c
 
 
 
-
 - To change image transparency, right-click the layer in the table of contents → Properties → Legend → use arrow to add opacity slider to Used Widgets. After clicking OK, slider will appear in layer list
 
 - Properties → Transparency → **No Data** set to **0** removes the black border
