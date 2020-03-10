@@ -53,223 +53,51 @@ The various scripts and processes in this project generate many temporary workin
 
 ![file structure](https://geoservices.leventhalmap.org/docs/media/img/data-backup.png)
 
+
+
+# Source imagery
+To create archival copies of all individual plates associated with any BPL barcode, place a copy of [get-all-by-barcode.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-all-by-barcode.py "Download all tiffs script") inside the atlas barcode folder & run from the terminal. You will need to change the part of the script that specifies which particular barcode to download. Running this will take approximately twenty minutes, and will result in a folder entitled "arch_tiff" containing all plates associated with that barcode. 
+
+
 # Georeferencing
 
-Individual atlas plates must be spatially aligned before becoming the input data for a raster mosaic.
+**Georeferencing tool:** <br>
+QGIS plugin GDAL Georeferencer is used for georeferencing. Using this tool, .geotifs and .txt gcps are exported for each individual atlas plate. 
 
-Georeferencing refers to the process of adding pairs of corresponding location points to both a digital map and a non-spatial image file. After enough ground control points (gcps) have been defined, image files can be exported with various other image settings (compression type, file format, and so on) to create images that have desired image properties and are “spatially aware.”
+**Bit depth:** <br>
+Images should have been scanned at 8-bit depth. If they are 16-bit, you will need to convert the images to 8-bit.
 
-The following workflow will produce two separate formats of data that are important to preserve:
+**Projection:** <br>
+Individual plates are referenced to EPSG: 4326 projection and transformed during the mosaicing process to 3857 to be compatible with web mapping. Please note that subsequent steps in this process are projection-dependent, and if an alternate projection is chosen during georeferencing, the mosaicing and tiling process will fail. Step-by-step instructions for setting up a proper georeferencing environment for this project are available in [create mosaics → georeferencing](#/guides/tools-guides/atlascope/create-mosaics?id=georeferencing "create mosaics guide").
 
-- **Spatial imagery** - TIFF files that have been georeferenced and exported as geoTIFFs and
-- **Ground control points (gcps)** - .txt file containing gcp coordinates
 
+**Transformation settings:**<br>
+Transformation type: Polynomial 1 <br>
+Resampling method: Cubic <br>
+Target SRS: EPSG: 4326 - WGS 84 <br>
+Output Raster: spatial_imagery/**identifer** <br>
+Compression: LZW <br>
+Save GCP points: checked <br>
+Load in QGIS when done: checked <br>
+Everything else unchecked <br>
 
-## Steps
 
-<details>
-<summary>Locating and managing BPL source imagery</summary>
+**Importing gcps:** <br>
+It is possible to use GDAL Georeferencer to import previously created gcps, rather than create them from scratch. Step-by-step instructions for doing so are available in [create mosaics → importing gcps](#/guides/tools-guides/atlascope/create-mosaics?id=special-instructions "create mosaics guide").
 
-> - Locate the correct atlas using BPL [town](http://guides.bpl.org/mass-urban-atlases "Massachusetts Town Atlases") and [city](http://guides.bpl.org/urban-atlases/list "Boston Urban Atlases") libguides <br>
-> - Included under the volume-level citation in the libuide is a link to a list of all of the plates in that volume in the digital collections.<br>
-> - In the list results, observe the range of plate numbers or letters in the atlas, the number of plates to be included in the mosaic, and how many of these plates need to be georeferenced (some will be non-cartographic front matter, like the title plate)<br>
-> - Open one of the individual maps. Note the **identifier** and **barcode** field in the metadata. <br>
-> - The **identifier** is the unique ID for every plate-level digital object. The literal string observed as the value for the **identifier** field in the object's metadata should be the file name every time you are exporting both geoTIFFFS and control points<br>
-> - The **barcode** is the unique ID at the volume level
+# Handling insets
+For plates containing insets, the procedure is to georeference the plate twice, once for the main section of the plate, once for the inset (a portion of the map will be wrong in both cases). Irrelevant data is masked out later from each plate during the mosaicing process. 
 
-</details>
+Some plates may contain more than one inset. Files are named with suffixes identifier_inset1, identifier_inset2, and so on, depending on how many insets each plate contains. 
 
+When generating the masking footprint, you will want to be sure to create a unique polygon feature for each inset to ensure all map areas depicted in insets are included in the final mosaic. 
 
-1. Update the asset management table by changing **imagery** and **control points** fields from "to do" to "in progress" *LMEC uses an Airtable database to keep track of the status of the hundreds of atlases in this project*
-
-2. Create a folder locally on your computer, or, if you wish to be able to access your atlas project from multiple different locations, on a flash drive. If you are using a flash drive, ensure it is formatted as ExFAT.
-
-  The folder structure should be: `local storage → temp-atlas-processing → barcode`
-
-3. To download all archival quality geoTIFFs associated with any given atlas, create a copy of [get-all-by-barcode.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-all-by-barcode.py "Download all tiffs script") inside the atlas barcode folder.
-
-4. Open up this new copy of get-all-by-barcode.py in a text editor, and follow the commented instructions in the script, ensuring the barcode field is correct and will download images for the atlas you are working on.
-
-  This will take approximately twenty minutes to run, and will result in a folder entitled "arch_tiff" containing archival copies of all tiffs included in your atlas.
-
-
-2. Open one of the archival tiffs in a photo software to ensure scans for that atlas were imaged with 8-bit depth. If it is 16-bit, you will need to convert the images to 8-bit, or this georeferencing/mosaicing will not work.
-
-2. Once you have ensured the bit depth of the original images is 8-bit, open QGIS
-
-3. Add a basemap **Browser →  XYZ Tiles →  Open Street Map**
-
-4.  Set the projection to WGS 84. At all times in the bottom right of the QGIS document, EPSG should read 4326. **Project → Properties → CRS WGS 84 - EPSG: 4326 → Apply** *Individual atlas plates georeferenced in WGS 84 are compatible with the BPL Map Warper overlay viewer embedded in the LMEC digital collections. You may consider using CRS WGS 84 / Pseudo Mercator - EPSG: 3857, if georeferencing only for the purpose of creating raster mosaics. Choosing at different projection at this step will require other tweaks to the workflow.*
-
-![Check projection](https://geoservices.leventhalmap.org/docs/media/img/proj-check.png)
-
-5. Open **Raster → Georeferencer** The Georeferencing plugin comes automatically installed with recent versions of QGIS. If you do not see it, it is because it has not been enabled. To enable: navigate to **Plugins → Manage & Install Plugins → Installed** and make sure the box next to **Georeferencer GDAL** is CHECKED
-
-6. Open the TIFF you wish to georeference in the georeferencer, by clicking the blue checkered add raster icon in the menu banner.<br>
-![Add raster](https://geoservices.leventhalmap.org/docs/media/img/add-raster.png)
-
-
-7. After you have added one of the TIFFs to the **GDAL Georeferencer**, click the Add Point button in the menu banner
-![Add point](https://geoservices.leventhalmap.org/docs/media/img/qgis-add-gcp.png)
-
-8. Choose a spot on the historical map for which you think you can find a corresponding modern location. Intersections are a good place to start, if they still exist!
-
-9. Choose to add the corresponding location **From Map Canvas**
-![From Map Canvas](https://geoservices.leventhalmap.org/docs/media/img/map-canvas.png)
-
-10. Find the location on the modern map
-
-11. Click OK on the Enter Map Coordinates dialog box. In the **GDAL Georeferencer**, the map will not automatically snap to the correct location. Preview is not available until a few points have been added.
-
-12. Add two more control points, so that there are three total, attempting to spread the gcps on opposite corners of the map.
-
-13. When there are three points, click the green **Start Georeferencing** button <br>
-![Start georeferencing](https://geoservices.leventhalmap.org/docs/media/img/start-geo.png)
-
-14. The transformation settings will open. Select the following options:
-
-!> **Transformation type:** Polynomial 1 <br>
-**Resampling method:** Cubic <br>
-**Target SRS: EPSG:** 4326 - WGS 84 <br>
-**Output Raster:** spatial_imagery/**identifer** <br>
-**Compression:** LZW <br>
-**Save GCP points:** checked <br>
-**Load in QGIS when done:** checked <br>
-**Everything else unchecked** <br>
-
-15. Click the green **Start Georeferencing** button again. A progress bar will appear.
-
-16. The new file will be added to the QGIS document. Look at it closely to make sure everything is lining up properly.
-
-17. To make adjustments to the georeferencing, add more control points, or delete points that are incorrect, return to the **GDAL Georeferencer** window:
-
-    1. Use the GCP table to view error for gcps. Delete incorrect points by highlighting the row and right-clicking.
-
-    2. When new points are added or changes are made, click the green **Start Georeferencing** arrow again to update the geoTIFF. The updated image will be added to the map document.
-
-    3. Make sure that the file exported has the correct **identifier**.tif naming convention and is saved in a folder in the working atlas directory titled "spatial_imagery"
-
-18. When the final TIFF file has been georeferenced in a satisfactory manner and exported, navigate to the `spatial_imagery` folder. Open the .txt file in a text editor to ensure that the points are saving correctly. <br><br>
-![GCPs example](https://geoservices.leventhalmap.org/docs/media/img/gcps-example.png)
-
-19. Drag the .txt gcp file from `spatial_imagery` into a newly created folder in the working directory at the atlas root level titled `gcps`
-
-20. If, for some reason, they did not export correctly, it is possible to export them by navigating back into the **GDAL Georeferencer** window and selecting **File → Save GCP points as ...**
-
-21. Open the new geoTIFF in a photo editing software, preferably Photoshop. You only need to do this for the first plate in every atlas, to ensure bit depth of archival scans is correct. If it opens normally, proceed georeferencing the rest of the plates. If the geotiff will not open, you will need to run script convert-16-to-8-bit-tiffs.sh before proceeding.
-
-22. In the QGIS georeferencer, select **File → Reset Georeferencer**
-
-23. Repeat this process with all plates in the atlases
-
-24. Ensure all spatial imagery and ground control points are backed with the [correct backup structure](https://geoservices.leventhalmap.org/docs/#/atlascope/creating/backup "backup").
-
-25. Complete and submit an imagery quality control checklist. *LMEC uses peer-editing to ensure data has been created and processed at a high-quality*
-
-
-
-
-
-
-
-
-
-## Special instructions
-
-### Importing gcps {docsify-ignore}
-
-This section of the guide describes how to import an existing gcp .txt file rather than having to manually add points for spatial alignment. This comes in handy when:
-- Imagery was accidentally exported with less-than-ideal settings, resulting in poor image quality
-- Spatial alignment is slightly off, and needs to be fixed
-
-
-1. Create a new folder in the working atlas root directory titled **spatial_imagery**. This is where the new spatial imagery will be saved. If there is already a file named "spatial_imagery," delete it
-
-2. Open QGIS and set up the document by adding a basemap **Browser → XYZ Tiles → Open Street Map** and setting the coordinate system **Project → Properties → CRS WGS 84 - EPSG: 4326 → Apply**
-
-3. If a footprint already exists for this atlas, bring the Boundary file into QGIS as a way to ensure that the geoTIFFS align with each other correctly. Use the opacity slider to adjust transparency of the layer.
-
-4. Open **Raster → Georeferencer** and select **Add Raster** to open the original TIFF.
-
-!> Make sure you are opening the archival quality digital scan. Do not open any previously referenced geoTIFFS, as this will defeat the purpose of rereferencing with new settings to increase image quality
-
-5. Instead of manually adding new points, you will load existing gcps. There are three ways to do this:
-
-    1. **File → Load GCP Points**
-
-    2. Menu icon <br>
-    ![Import gcps](https://geoservices.leventhalmap.org/docs/media/img/import-gcps.png)
-
-    3. Keyboard shortcut ⌘ L
-
-When the file search window opens, navigate to the correct .txt file
-
-6. Select **Start Georeferencing** <br>
-![Start georeferencing](https://geoservices.leventhalmap.org/docs/media/img/start-geo.png)
-
-7. The transformation settings will open. Select the following options:
-
-!> **Transformation type:** Polynomial 1 <br>
-**Resampling method:** Cubic <br>
-**Target SRS: EPSG:** 4326 - WGS 84 <br>
-**Output Raster:** spatial_imagery/**identifer** <br>
-**Compression:** LZW <br>
-**Save GCP points:** `unchecked` <br>
-**Load in QGIS when done:** checked <br>
-**Everything else unchecked** <br>
-
-8. Click the green **Start Georeferencing** button again. A progress bar will appear.
-
-9. The new file will be added to the map document. Inspect the alignment closely. Use the footprint geometry and basemap to ensure the imagery corresponds to the correct polygon feature in the footprint file, and that the alignment is correct.
-
-!> If you find that the alignment is inaccurate and needs to be redone, return to the **GDAL Georeferencer** window, modify points and re-georeference the plate.<br> <br>
-Keep in mind any existing footprint has been created to conform to the saved gcps, so any changes made to the spatial alignment of atlas plates will also need to be reflected in edits to the polygon geometry in the masking footprint layer.
-
-
-If you make any edits to gcps:
-
-> 1. Save the modified gcps in the working atlas directory folder `gcps` by typing command + S in the **GDAL Georeferencer** Window<br>
-> 2. The fooprint will no longer be usable until updated to reflect the alignment changes. Make a note of the plates you have altered so you can edit the corresponding polygon features in the footprint layer.
-
-10. **File → Reset Georeferencer** and open the next image from the original scan archival TIFF folder
-
-
-### Georeferencing insets {docsify-ignore}
-
-1. Georeference the plate twice. Once for the main section, and once for the inset (a portion of the map will be wrong in both cases)
-
-2. Naming standard: the geoTIFF with the main part of the map should be named normally (identifier with no suffix). The insets will have suffixes that are numbers counting up (depending on how many insets there are, beginning at 1 (identifier_inset1, identifier_inset2, and so on.)
-
-3. In subsequent steps, the geoTIFFS for each plate will be imported and treated as completely separate plates that each need their own polygon feature in the masking footprint layer (the irrelevant/overlapping portions will be masked out by the footprint during the mosaicing process)
-
-4. When adding metadata, the inset should have its own record in metadata.csv. All of the fields for this record should have identical values to that of the "main" plate. The only field for the inset records that should have a different value than the main plate is the identifier value (identifier vs. identifier_inset1).
-
-
-### Multiple-scale volumes {docsify-ignore}
-
-Historical urban atlases for densely populated cities are likely to include plates that are homogenous in scale.
-
-On the other hand, it is common in atlases representing less densely-populated areas, like in county and town atlases, to find plates at various scales. When this occurs, separate mosaics should be created for each scale.
-
-1. Within the working atlas root directory, create two sub-folders that will house the mosaic data for each scale mosaic. Use the barcode as the folder basename with alphabetic suffixes to differentiate between the scales:
-  - example:  39999059011153a, 39999059011153b, and so forth for each scale that exists
-
-2. Create a new record in the Airtable for each scale mosaic with the appropriate barcode ID
-
-3. Proceed with the georeferencing process as normal. A separate footprint will also need to be created for each scale.
-
-### Image files {docsify-ignore}
-
-In cases where you wish to download all image files associated with a particular BPL barcode, use [get-all-by-barcode.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/get-all-by-barcode.py "Download all tiffs script"). Resulting downloaded images will be named the file's BPL identifier.
-
-In cases where you need to batch edit the file names of images, use [rename-files.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/rename-files.py "Rename files script").
+When joining the masking footprint with the bibliographic metadata, the inset should have its own record in the metadata csv. All of the fields for this record should have identical values to that of the "main" plate. The only field for the inset record that should have a different value than the main plate is the identifier value (identifier vs. identifier_inset1).
 
 
 # Masking
 
-## Context
-
-This step produces a **footprint** for the atlas. This footprint is a polygon layer used to:
+Footprint layers are used to:
 
 1. Mask out superfluous or empty “white space” on historical atlas plates, a necessary step for seamless mosaicing
 2. Store references to plate-level library metadata, ultimately included in front-facing interfaces for the purpose of increasing accessibility to the historical archives
@@ -278,12 +106,13 @@ Broadly, this is accomplished by:
 
 1. Generating a polygon layer that includes a feature for every georeferenced plate in the atlas, and editing the geometry of these features to appropriately reflect the desired extent of the plate data (including insets)
 2. Joining the newly created footprint with plate-level library metadata
-3. Exporting the footprint in geoJSON format for use in front-facing discovery environments
 
-## Tips
+To ensure a feature exists for every spatial image in the volume, you can use [create-plate-index.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/create-plate-index.py "script to autogenerate footprint layer"). This script will automatically generate a feature for every .tif file in whatever folder it is run from. It will also create a field in the newly generated vector file containing the correct identifier number as a value for every feature/record. 
 
-- Use the [libguide plate index](https://apps.bpl.org/nblmc/indexes/index-pinney-1861-boston.html "libguide plate index example"), or, if no libguide plate index exists, the [historical index plate](https://collections.leventhalmap.org/search/commonwealth:6h446z575 "historical index plate example") to determine which plates are adjacent to one another and warrant a comparison. <br>
-*Prior to offering direct access to high-resolution mosaiced imagery, BPL provided vector plate indices to locate atlas plates by location. Conceptually and in format, these index guides resemble the footprint layer described by this step, but because these indices were created for the purpose of locating plates, and not for mosaicing, they lack the necessary degree of accuracy required to create high-quality mosaics.*
+
+
+
+
 
 - To change image transparency, right-click the layer in the table of contents → Properties → Legend → use arrow to add opacity slider to Used Widgets. After clicking OK, slider will appear in layer list
 
