@@ -1,26 +1,17 @@
-## Introduction
+# Introduction {docsify-ignore}
 
-The following guides will walk through a process that begins with a [collection of individual atlas plates](https://collections.leventhalmap.org/search?utf8=%E2%9C%93&q=39999059015550 "Cambridge 1873 plate list"), and results in a [mosaiced tiled map service](https://geoservices.leventhalmap.org/atlas-extent-viewer/index.html#39999059015550 "Cambridge 1873 mosaic").
+The LMEC collection of fire insurance and real estate atlases of metropolitan Boston is in the process of being imaged, georeferenced, and mosaiced to produce continuous-coverage, geographically-locatable versions of these historic objects.
 
+This documentation contains information on how to create the underlying data sources of the Atlascope project, including raster imagery, vector boundary files, and metadata records. It assumes prior knowledge with GIS and data tools.
 
-The broad contours of this workflow include georeferencing individual atlas plates, masking them using a footprinting layer to only reveal appropriate data, stitching plates together to create a raster mosaic, and publishing the stitched mosaic as a tiled map service.
-
-
-Some instructions pertain to particulars of the Leventhal Map & Education Center (LMEC) at the Boston Public Library (BPL) collections, for example, file naming structures, metadata standards, and so on, but the idea behind and implementation for each step can be applied universally. *BPL-specific instructions will be flagged, to indicate one should consider their own institution or project-specific details.*
-
-The software and tools described in this process are all free. Cost lies in staff time required to process the imagery, and in data storage for resulting tile services.
-
-
-The guides for each step in the process have been written to include context, tips for efficiency (e.g. when adding a control point in QGIS, hold the spacebar to pan the map), step-by-step instructions for working through the process, and any special notes or considerations.
-
-A workflow for mosaicing historical atlases could take many different forms. Please find included the one we have discovered - through trial and error - works best for creating low-cost, high-quality tiled map services of historical atlas mosaics in open formats. This workflow relies on the use of QGIS and free-standing Python scripts in a Mac environment. Please do not hesitate to get in touch for further inquiry, or for help navigating special considerations centered on the use of Windows or the ESRI suite: *reference@leventhalmap.org*
+For a more contextual and step-by-step overview of the process, visit our [create mosaics guide](#/guides/tools-guides/atlascope/create-mosaics "create mosaics guide").
 
 
 
 # Requirements
 
 - Scans of the individual atlas plates (recommended ≥ 300 dpi TIFF format)
-- GIS Application - these guides are written for QGIS
+- GIS Application - this documentation is written for QGIS
 - Text editor - Atom, Notepad ++, Visual Studio Code or other
 - FTP Client - these guides are written for Cyber Duck
 - (**$**) Cloud storage - BPL uses low-cost Boston-based Wasabi
@@ -28,11 +19,26 @@ A workflow for mosaicing historical atlases could take many different forms. Ple
 
 
 
+# QGIS workspace
+
+To set up the QGIS workspace for this process, qgis plugins → python console → show editor
+copy the below script into the editor & press **run**
+
+```shell
+for layer in [layer for layer in QgsProject.instance().mapLayers().values()]:
+  if layer.name().lower() in ["openstreetmap", "index", "boundary"]:
+    continue
+    layer.renderer().setOpacity(0.6) #can change 6 for different opacity value
+    provider = layer.dataProvider()
+    provider.setNoDataValue(1,0) 
+    layer.triggerRepaint()
+```
+# File structure
+
+![file structure](#/docs/media/img/data-structure.png)
 
 
 # Georeferencing
-
-## Context
 
 Individual atlas plates must be spatially aligned before becoming the input data for a raster mosaic.
 
@@ -42,27 +48,6 @@ The following workflow will produce two separate formats of data that are import
 
 - **Spatial imagery** - TIFF files that have been georeferenced and exported as geoTIFFs and
 - **Ground control points (gcps)** - .txt file containing gcp coordinates
-
-While the spatial imagery will exist as TIFF files that can be fed as input into the mosaicing process, the ground control points (gcps) are important from a long-term preservation standpoint. For each atlas plate georeferenced, a .txt file with a list of x,y coordinates for each control point should also be exported. This .txt file is an excellent way to make the most out of the time spent georeferencing for the following reasons:
-- .txt files are small compared to raster imagery -- great for long-term preservation
-- When a geoTIFF has been exported after referencing, the saved image will exist as a capture of all the choices made at the time the image is exported. This means compression settings, file type, resampling methods, spatial alignment and other properties are baked into a new TIFF file. Gcps, on the other hand, can be used as future input to generate spatial imagery with any number of settings. Ensuring that gcps are exported after every plate has been georeferenced ensures that spatial alignment is backed up, even in the case that image files are somehow saved with incorrect settings or properties.
-- If a plate is aligned incorrectly, one can simply alter gcps which have been backed up, rather than restart the georeferencing process from scratch.
-
-
-Another aspect to take into account is whether the historical images at hand allow for the automation of the alignment process. If so, it may be worthwhile looking into workflows that speed up this process.
-
-The 19th century historical urban atlases for which these guides were created contain plates that are too nuanced and lacking in standardization to automate the alignment or masking processes.  Similarly, many plates are laden with map insets. For these reasons, it would be difficult, if not impossible to automate the alignment process and still expect mosaicing results that achieve an equal level of precision as delivered by the included workflow.
-
-One should consider the data at hand -- if the maps requiring alignment have standard, rectangular extents, [workflows](http://www.e-perimetron.org/Vol_14_3/Fleet.pdf "NLS Automated Georeferencing") have been developed for drastically speeding up the georeferencing process. This guide describes the process of manual georeferencing.
-
-
-## Tips
-
-- To adjust the transparency of a layer, right click on the layer in the QGIS Layers window and navigate to Properties → Transparency. This will allow you to compare the image location against the basemap
-
-
-- To add an opacity slider to a layer, navigate to the Legend tab in the Properties and move the Opacity Slider to the Used Widgets side
-
 
 
 ## Steps
