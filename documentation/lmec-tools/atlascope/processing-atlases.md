@@ -49,7 +49,7 @@ This project creates many different files, some of which are temporary, intermed
 
 # File backup 
 
-The various scripts and processes in this project generate many temporary working files that are used locally. There is a long term data archiving strategy in progress, summarized in this chart:
+The various scripts and processes in this project generate many temporary working files that are worked with and stored locally. There is a long term data archiving strategy in place, which captures all meaningful long-term data. 
 
 ![file structure](https://geoservices.leventhalmap.org/docs/media/img/data-backup.png)
 
