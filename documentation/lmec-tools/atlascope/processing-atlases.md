@@ -35,8 +35,23 @@ for layer in [layer for layer in QgsProject.instance().mapLayers().values()]:
 ```
 # File structure
 
+This project creates many different files, some of which are temporary, intermediary working files, others which will be backed up long-term. 
+
+> The files which will be backed up long term are:<br><br>
+**Spatial imagery:** spatially-aligned versions of the archival tiffs for each atlas plate (.geotif)<br>
+**Gcps:** control points created for spatial alignment purposes (.txt)<br>
+**Boundary:** vector polygon where each feature corresponds to an atlas plate. Used for masking out unwanted data for the mosaic & to link tiles back to unique digital collections items by joining with library metadata (.geojson)<br>
+**Mosaic:** massive, spatially aligned imagery file of all masked plates stitched together (.geotif)<br>
+**Tiles:** tiles are generated from the large mosaic.tif file (TMS .png tiles, zoom levels 13-20)<br>
+
+
 ![file structure](https://geoservices.leventhalmap.org/docs/media/img/data-structure.png)
 
+# File backup 
+
+The various scripts and processes in this project generate many temporary working files that are used locally. There is a long term data archiving strategy in progress, summarized in this chart:
+
+![file structure](https://geoservices.leventhalmap.org/docs/media/img/data-backup.png)
 
 # Georeferencing
 
