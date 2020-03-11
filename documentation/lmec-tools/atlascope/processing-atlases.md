@@ -2,7 +2,7 @@
 
 The LMEC collection of fire insurance and real estate atlases of metropolitan Boston is in the process of being imaged, georeferenced, and mosaiced to produce continuous-coverage, geographically-locatable versions of these historic objects.
 
-This documentation contains information on how to create the underlying data sources of the Atlascope project, including raster imagery, vector boundary files, and metadata records. It assumes prior knowledge with GIS and data tools, and is written for a Mac + QGIS environment. For questions related to Windows or ESRI workflows, please do not hesistate to [get in touch](leventhalmap.org/research/gis "gis form")
+This documentation contains information on how to create the underlying data sources of the Atlascope project, including raster imagery, vector boundary files, and metadata records. It assumes prior knowledge with GIS and data tools, and is written for a Mac + QGIS environment. For questions related to Windows or ESRI workflows, please do not hesistate to [get in touch](leventhalmap.org/research/gis "gis form").
 
 For a more contextual and step-by-step overview of the process, visit our [create mosaics guide](#/guides/tools-guides/atlascope/create-mosaics "create mosaics guide").
 
