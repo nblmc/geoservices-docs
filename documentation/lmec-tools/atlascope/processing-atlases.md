@@ -104,10 +104,10 @@ Footprint layers are used to:
 
 Broadly, this is accomplished by:
 
-1. Generating a polygon layer that includes a feature for every georeferenced plate in the atlas, and editing the geometry of these features to appropriately reflect the desired extent of the plate data (including insets)
-2. Joining the newly created footprint with plate-level library metadata
+1. Generating a masking polygon layer that includes a feature for every georeferenced plate in the atlas, and editing the geometry of these features to appropriately reflect the desired extent of the plate data (including insets). 
+2. Joining the newly created masking footprint with plate-level library metadata and using it to link web tools like Atlascope with the digital collections items for each plate.
 
-To ensure a feature exists for every spatial image in the volume, you can use [create-plate-index.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/create-plate-index.py "script to autogenerate footprint layer"). This script will automatically generate a feature for every .tif file in whatever folder it is run from. It will also create a field in the newly generated vector file containing the correct identifier number as a value for every feature/record. 
+To ensure a feature exists for every spatial image in the volume, you can use [create-plate-index.py](https://github.com/nblmc/atlascope-assets/blob/master/scripts/create-plate-index.py "script to autogenerate footprint layer"). This script will automatically generate a feature for every .tif file in whatever folder it is run from. It will also create a field in the newly generated vector file containing the correct identifier number as a value for every feature/record. This identifier number will be the common field used to join with library metadata. 
 
 
 
