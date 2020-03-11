@@ -161,7 +161,7 @@ If errors are returned, the mosaic will not generate, and you will need to use t
 
 # TMS Tiling
 
-Tiles are created using gdal2tiles.py. The command is run from `Documents → temp-atlas-tiles → barcode → mosaic.py`. Tiles are uploaded to cloud storage, backed up to [appropriate storage](#/documentation/lmec-tools/atlascope/processing-atlases?id=file-backup "storage"), and the local tiles are erased. 
+Tiles are created using gdal2tiles.py. The command is run performed on `Documents → temp-atlas-tiles → barcode → mosaic.tif`. Tiles are uploaded to cloud storage, backed up to [appropriate storage](#/documentation/lmec-tools/atlascope/processing-atlases?id=file-backup "storage"), and the local tiles are erased. 
 
 ```shell
 $ gdal2tiles.py -r cubic -p mercator -e -z 13-20 --processes=6 mosaic.tif tiles/
