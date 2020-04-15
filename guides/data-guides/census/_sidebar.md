@@ -1,0 +1,9 @@
+- [Home](/ "Data Guides") 
+- **[course lessons: <br> census data for mapping](/guides/data-guides/census)**
+- [1. Picking data](/guides/data-guides/census/1.md "1. Picking data")
+- [2. Checking out](/guides/data-guides/census/2.md "1. Checking out")
+- [3. Using the dictionary](/guides/data-guides/census/3.md "3. Using the dictionary")
+- [4. Joining data](/guides/data-guides/census/4.md "4. Joining data")
+- [5. Clipping to area](/guides/data-guides/census/5.md "5. Clipping to area")
+- [6. Symbolizing the data](/guides/data-guides/census/6.md "6. Symbolizing the data")
+- [❗SANDTRAPS](/guides/data-guides/census/sandtraps/ "Sandtraps")
