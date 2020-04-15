@@ -1,3 +1,3 @@
 - [Home](/ "Data Guides") 
 - **[📊 geospatial data guides](/guides/gis-guides/)**
-  - [How to download and use <br> census data for mapping](/guides/data-guides/find-census-data.md "Clip data by extent")
+  - [How to download and use <br> census data for mapping](/guides/data-guides/find-census-data.md "Find census data for mapping")
