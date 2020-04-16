@@ -1,42 +1,24 @@
-<div class = "lmec-header">LMEC Mapping & GIS Help Center </div>
-
-<br>
-
-<div class = "suggestions">
+<div class = "lmec-header">Finding and Using Census Data for Mapping</div>
 
 
-<div id = "for-mapmakers">
-<h3>Mapmakers</h3>
-<h4>Workshops</h4>
-<p><a href="#/workshops/">Where are your classes located? →</a></p>
-<p><a href="#/workshops/">What classes are currently being offered? →</a></p>
-<p><a href="#/workshops/">How much experience do I need? →</a></p>
-<p><a href="#/workshops/map201">Can I follow your workshops from home? →</a></p><br>
-<h4>Geospatial data</h4>
-<p><a href="#/documentation/lmec-data/urban-atlases/atlas-imagery">How do I access Atlascope data? →</a></p>
-<p><a href="#/guides/data-guides/find-census-data">How do I find the right census data for my mapping project? →</a></p>
-<br>
-<h4>Learning GIS</h4>
-<p><a href="#/guides/gis-guides/">LMEC GIS tutorial topics →</a></p>
-<p><a href="https://my.nicheacademy.com/bostonpublic/course/1399">How do I log in to Lynda with my BPL card? →</a></p>
-</div>
+In this course, you will learn:
+
+- How to search for and download census data compatible with mapping
+- How to make sense of and use the data you have downloaded
+- Some important considerations when working with demographic data in a mapping context
+
+This course is broken up into six consecutive lessons, each with step-by-step instructions.
+
+1. How to select data using filters. 
+2. How to create a free account and download, or "check out" data.
+3. How to interpret the data using the data dictionary.
+4. How to join statistical data to geography shape data.
+5. How to clip the data to a particular area.
+6. How to symbolize the data and make a map.
+
+In addition to the lesson steps, please find "Sandtraps," or important context points to keep in mind when working with demographic data. These considerations are referenced throughout the lesson steps, and organized under the Sandtraps menu bar. 
 
 
+🎠[insert map screenshot] The final result of this course will be the following map, depicting distribution of youth population in Boston, Massachusetts. 
 
-<div id = "for-librarians">
-<h3>Librarians</h3>
-<h4>Atlascope</h4>
-<p><a href="#/guides/tools-guides/atlascope/create-mosaics">How do I make atlas mosaics? →</a></p>   
-<p><a href="#/guides/tools-guides/atlascope/digital-collections">How do I find individual atlas pages in the digital collections? →</a></p>  
-</div>
-
-</div>
-
-
-
-<div class="lmec-header" 
-<h1>Ask us anything  👇 </h1></div>
-
-<script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe class="airtable-embed airtable-dynamic-height" style="background: transparent; border: 1px solid #ccc;" src="https://airtable.com/embed/shrY1Rvnl5qfYo99n?backgroundColor=teal" width="100%" height="1784" frameborder="0"></iframe>
-
-
+For any questions related to this or any other data and mapping project, please do not hesitate to [get in touch](https://www.leventhalmap.org/research/gis/ "get in touch").
