@@ -14,7 +14,7 @@
 <p><a href="#/workshops/map201">Can I follow your workshops from home? →</a></p><br>
 <h4>Geospatial data</h4>
 <p><a href="#/documentation/lmec-data/urban-atlases/atlas-imagery">How do I access Atlascope data? →</a></p>
-<p><a href="#/guides/data-guides/find-census-data">How do I find the right census data for my mapping project? →</a></p>
+<p><a href="#/guides/data-guides/census/">How do I find the right census data for my mapping project? →</a></p>
 <br>
 <h4>Learning GIS</h4>
 <p><a href="#/guides/gis-guides/">LMEC GIS tutorial topics →</a></p>

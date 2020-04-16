@@ -1,11 +1,13 @@
 <div class = "lmec-header">Finding and Using Census Data for Mapping</div>
 
 
-In this course, you will learn:
+## Course objectives {docsify-ignore}
 
 - How to search for and download census data compatible with mapping
 - How to make sense of and use the data you have downloaded
 - Some important considerations when working with demographic data in a mapping context
+
+## Course lessons {docsify-ignore}
 
 This course is broken up into six consecutive lessons, each with step-by-step instructions.
 
@@ -16,9 +18,14 @@ This course is broken up into six consecutive lessons, each with step-by-step in
 5. How to clip the data to a particular area.
 6. How to symbolize the data and make a map.
 
-In addition to the lesson steps, please find "Sandtraps," or important context points to keep in mind when working with demographic data. These considerations are referenced throughout the lesson steps, and organized under the Sandtraps menu bar. 
+## Considerations {docsify-ignore}
 
+In addition to the lesson steps, please find "Considerations," or important context points to keep in mind when working with demographic data. These considerations are referenced throughout the lesson steps, and organized under the Considerations menu bar. 
+
+## Course activity {docsify-ignore}
 
 🎠[insert map screenshot] The final result of this course will be the following map, depicting distribution of youth population in Boston, Massachusetts. 
 
-For any questions related to this or any other data and mapping project, please do not hesitate to [get in touch](https://www.leventhalmap.org/research/gis/ "get in touch").
+## Project help {docsify-ignore}
+
+<script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe class="airtable-embed airtable-dynamic-height" style="background: transparent; border: 1px solid #ccc;" src="https://airtable.com/embed/shrY1Rvnl5qfYo99n?backgroundColor=teal" width="100%" height="1784" frameborder="0"></iframe>
