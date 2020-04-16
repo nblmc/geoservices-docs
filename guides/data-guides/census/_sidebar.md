@@ -6,4 +6,4 @@
 - [4. Joining data](/guides/data-guides/census/4.md "4. Joining data")
 - [5. Clipping to area](/guides/data-guides/census/5.md "5. Clipping to area")
 - [6. Symbolizing the data](/guides/data-guides/census/6.md "6. Symbolizing the data")
-- [❗CONSIDERATIONS](/guides/data-guides/census/considerations.md "Considerations")
+- [CONSIDERATIONS](/guides/data-guides/census/considerations.md "Considerations")
