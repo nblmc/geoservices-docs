@@ -12,7 +12,6 @@ You will want to use at least the top 3 facets, "Geographic Levels," "Years," an
 After you have selected one facet, NGHIS will dim out any unavailable options for the other facets, based on other categories you have selected. For example, if we were interested in making a map about populations of enslaved people in the early 1800s using census data, and had selected "slavery" as our first **topic** facet, when we went to choose from **year** options, we would only be able to select data from narrow census years between 1790 and 1860, when the Census Bureau collected information about the United States' enslaved population. 
 
 
-Age, being a "core" demographic that has been gathered from the first census up present day, can be found in every census year.
 
 ## Years 
 
