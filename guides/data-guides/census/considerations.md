@@ -24,7 +24,26 @@ In the every-ten-year censuses, only a handful of core demographic questions are
 
 The census **also** collections much more detailed, long-form data. This data, however, is not gathered about every single person, rather, it is gathered about **sample populations**. This is called the American Community Survey. Some pros to the ACS are that the data are much more recent and frequent than the decennial censuses, and more detailed questions are asked of respondents. A major con is that because the data are **sample data**, they are less reliable than the full decennial counts, sometimes having significantly high [margins of error](https://www.statisticssolutions.com/how-does-margin-of-error-work/ "margins of error"). 
 
-## MAUP
+## Aggregation 
 
-asdfjad;slkfj
+The final filter we wish to use is the "Geographic Levels" filter. This will determine the geographic unit by which we will aggregate our statistical information. The Census Bureau makes data available in the aggregate, as opposed to providing information about individuals. This is good, because we don't want to put people's privacy at risk by releasing personal information about them. Instead, the census shares people's data by grouping the results into one number for each area.
+
+By using the "Geographic Levels" filter, we can pick how big or small we want the summary areas on our map to be. Data is available all the way at the broad state level, which you would pick if you wanted to make a map of the number of people for every state, all the way down to sometimes even block-by-block, depending on which data you are looking for.
+
+What does this look like when we download the data? Instead of downloading a spreadsheet where every row represents one person, and contains information about that person, we can download the count or tally of people who live in a geographic unit, which we pick when we using the "Geographic Levels" filter. For example, if we were to select "State" from the Geographic Levels filter, we would be downloading a spreadsheet where every row represents one US state, and contains an under-18 summarized number for each state.
+
+
+In our activity, we want to show demographic makeup of Boston, so a good geographic unit to select would be census tract. County-level data would not be specific enough to give us a meaningful understanding of geographic patterns, but census tracts are smaller than counties, so using tracts would give us that level of precision. Most modern day data are available at the tract level, so it is a reliable unit to pick, if you are looking for specific data. Blocks are even more specific, but not all data is available at that level.
+
+[🎠 add pics of each geographic unit for Boston ]
+
+
+Even though its important to protect people's privacy, any time we summarize individual data points into groups using geography, problems arise. Most of these problems are tied to the issues inherent in the sometimes arbitrary and sometimes intentional ways borders have been and continue to be defined by **people**. How those choices have been made and continue to be made affects the ways we read geographic distribution on maps. This very common problem is called the Modifiable Areal Unit Problem (MAUP), and is demonstrated in this graphic below:
+
+![maup](https://geoservices.leventhalmap.org/docs/media/img/maup.png)
+
+This graphic depicts how, depending on where the boundary line is drawn, singular occurrences of a phenomenon are grouped together differently, changing our visual reading of any given area's percentage or proportion of the phenomenon at hand. 
+
+Being aware of issues like margins of error and MAUP make us more critical consumers and more effective and ethical creators of visual graphics.
+
 
