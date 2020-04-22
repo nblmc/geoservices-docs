@@ -28,7 +28,7 @@ The census **also** collections much more detailed, long-form data. This data, h
 
 The final filter we wish to use is the "Geographic Levels" filter. This will determine the geographic unit by which we will aggregate our statistical information. The Census Bureau makes data available in the aggregate, as opposed to providing information about individuals. This is good, because we don't want to put people's privacy at risk by releasing personal information about them. Instead, the census shares people's data by grouping the results into one number for each area.
 
-By using the "Geographic Levels" filter, we can pick how big or small we want the summary areas on our map to be. Data is available all the way at the broad state level, which you would pick if you wanted to make a map of the number of people for every state, all the way down to sometimes even block-by-block, depending on which data you are looking for.
+By using the "Geographic Levels" filter, we can pick how big or small we want the summary areas on our map to be. Data is available all the way at the broad state level, which you would pick if you wanted to make a map of the number of people for every state, all the way down to a small city block.
 
 What does this look like when we download the data? Instead of downloading a spreadsheet where every row represents one person, and contains information about that person, we can download the count or tally of people who live in a geographic unit, which we pick when we using the "Geographic Levels" filter. For example, if we were to select "State" from the Geographic Levels filter, we would be downloading a spreadsheet where every row represents one US state, and contains an under-18 summarized number for each state.
 
