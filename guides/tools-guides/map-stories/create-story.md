@@ -63,3 +63,16 @@ You can add a second “stop” on your map by adding a second row to the Google
 ### Publishing {docsify-ignore}
 
 1. The “Map Story Generator” tool creates a map storyline from your Google Sheet. Open it in a new browser window or tab: https://geoservices.leventhalmap.org/map-story-generator/ 
+2. Back in your Google Sheet, select the “Share” button, make sure that Link Sharing is “on,” and then copy the shareable link to your Google Sheet 
+3. In the Map Story Generator tool, paste the shared link to your Google Sheet in the first box 
+4. In the second box, “Tour Identifier,” choose an identifier for your story. This will become part of your tour’s URL, and it shouldn’t have spaces. For instance, if you choose “boston-public-garden” as your identifier, the final story will have the URL “https://geoservices.leventhalmap.org/map-stories/#boston-public-garden” 
+
+>NOTE: If you choose the same identifier as an existing story, running this tool will UPDATE the story rather than creating a new one. This is how you edit an existing story. 
+
+5. In the third and fourth boxes, type the name of your story and the author name. 
+6. Click the “Generate” button, and, if everything goes correctly, you should get a map story URL created for you!  
+7. Click through to the URL for the new story to see it live. If you need to make edits, go back to your Google Sheet, and then begin again at Publishing step 3 here, using the same “Tour Identifier” 
+
+<div class = "considerations"> 
+💡 <a href = "https://geoservices.leventhalmap.org/docs/#/guides/tools-guides/map-stories/how-it-works?id=making-updates" target = "_self">How do updates work? </a> 
+</div> 
