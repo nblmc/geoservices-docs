@@ -71,8 +71,8 @@ You can add a second “stop” on your map by adding a second row to the Google
 
 5. In the third and fourth boxes, type the name of your story and the author name. 
 6. Click the “Generate” button, and, if everything goes correctly, you should get a map story URL created for you!  
-7. Click through to the URL for the new story to see it live. If you need to make edits, go back to your Google Sheet, and then begin again at Publishing step 3 here, using the same “Tour Identifier” 
+
 
 <div class = "considerations"> 
-💡 <a href = "https://geoservices.leventhalmap.org/docs/#/guides/tools-guides/map-stories/how-it-works?id=making-updates" target = "_self">How do updates work? </a> 
+💡 <a href = "https://geoservices.leventhalmap.org/docs/#/guides/tools-guides/map-stories/how-it-works?id=making-updates" target = "_self">How do I update my story? </a> 
 </div> 
