@@ -10,5 +10,5 @@ You can learn more at [iiif.io](https://iiif.io/ "iiif.io")
 
   ## Sequence
 
-  This is here so that in the next version of the viewer, we can deal with objects that have multiple images for the same record entry. 
+  The sequence field exists so that in the next version of the viewer, we can deal with objects that have multiple images for the same record entry. 
 
