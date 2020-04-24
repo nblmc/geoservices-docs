@@ -1,3 +1,4 @@
 - [Home](/ "Map Center original tools guides") 
-- **[map center original tools](/guides/tools-guides/)**
+- **[LMEC DIGITAL PROJECTS](/guides/tools-guides/)**
   - [Atlascope](/guides/tools-guides/atlascope/ "Atlascope")
+  - [Map Stories](/guides/tools-guides/map-stories/ "Map Stories")
