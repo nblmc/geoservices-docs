@@ -39,3 +39,6 @@ Map Stories are lightweight, interactive interpretive overlays on our Digital Co
 
 1. If you just want to show the entire map or image, just enter the word fit in the column extent of your Google Sheet 
 2. If you want this stop on the storyline to show a zoomed in section of the map, go to the IIIF Extent Viewer tool in another tab.  
+3. Paste the id string for your map into the “Enter Digital Commonwealth ID” field of the Extent Viewer, and click “Load” 
+
+<img src='https://geoservices.leventhalmap.org/docs/media/img/iiif-.png'></img>
