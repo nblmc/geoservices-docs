@@ -74,5 +74,5 @@ You can add a second “stop” on your map by adding a second row to the Google
 
 
 <div class = "considerations"> 
-💡 <a href = "https://geoservices.leventhalmap.org/docs/#/guides/tools-guides/map-stories/how-it-works?id=making-updates" target = "_self">How do I update my story? </a> 
+💡 <a href = "https://geoservices.leventhalmap.org/docs/#/guides/tools-guides/map-stories/how-it-works?id=making-updates" target = "_self">How do I make changes to my story? </a> 
 </div> 
