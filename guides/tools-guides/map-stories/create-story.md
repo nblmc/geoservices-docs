@@ -50,3 +50,18 @@ Map Stories are lightweight, interactive interpretive overlays on our Digital Co
 5. If you need to adjust the box, shift and drag on one of its edges, or just shift and drag in a new place
 
 <img src='https://geoservices.leventhalmap.org/docs/media/img/shift-drag.png'></img>
+
+6. Copy the bracketed set of numbers in the table under “Extent Coordinates” (including the brackets themselves) 
+7. Paste this string, with the brackets, into the extent column of the Google Sheet 
+8. Note that zooming and panning on the Extent Viewer doesn’t have an effect on how your story will look. The story presentation tool will automatically zoom to fit the extent box which you’ve selected. 
+
+### Add more maps or images and steps {docsify-ignore}
+
+You can add a second “stop” on your map by adding a second row to the Google Sheet, and so on. If you use the same id but a new extent, it will be the same map zoomed to a different section. If you use a new id, you’ll be jumping over to a new map or image. 
+
+
+### Publishing {docsify-ignore}
+
+1. The “Map Story Generator” tool creates a map storyline from your Google Sheet. Open it in a new browser window or tab: https://geoservices.leventhalmap.org/map-story-generator/ 
+
+<img src='https://geoservices.leventhalmap.org/docs/media/img/map-story-generator.png'></img>
