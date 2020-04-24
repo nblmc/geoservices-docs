@@ -17,3 +17,5 @@ To make a Map Story:
     b. You’ll need to copy the part of the URL in your browser that looks like **commonwealth:abc123xyz**
 
 <img src='https://geoservices.leventhalmap.org/docs/media/img/identifier-dc.png'></img>
+
+  c. Go to your Google Sheet, and in the first row, in the id column, paste that same string 
