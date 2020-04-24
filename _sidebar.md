@@ -1,5 +1,5 @@
 - [Home](/ "LMEC Documentation Base") 
 - **CATEGORIES**
-  - [Tutorials | How-Tos](/guides/ "LMEC tutorials and how-to guides")
-  - [Workshops | Curriculum](/workshops/ "LMEC curriculum and workshops")
+  - [How To Guides](/guides/ "LMEC tutorials and how-to guides")
+  - [Workshops](/workshops/ "LMEC curriculum and workshops")
   - [Documentation](/documentation/ "LMEC documentation")

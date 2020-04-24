@@ -38,7 +38,7 @@ In our activity, we want to show demographic makeup of Boston, so a good geograp
 [🎠 add pics of each geographic unit for Boston ]
 
 
-Even though its important to protect people's privacy, any time we summarize individual data points into groups using geography, problems arise. Most of these problems are tied to the issues inherent in the sometimes arbitrary and sometimes intentional ways borders have been and continue to be defined by **people**. How those choices have been made and continue to be made affects the ways we read geographic distribution on maps. This very common problem is called the Modifiable Areal Unit Problem (MAUP), and is demonstrated in this graphic below:
+Even though it is important to protect people's privacy, any time we summarize individual data points into groups using geography, problems arise. Most of these problems are tied to the issues inherent in the sometimes arbitrary and sometimes intentional ways borders have been and continue to be defined by **people**. How those choices have been made and continue to be made affects the ways we read data distribution on maps. This very common problem is called the Modifiable Areal Unit Problem (MAUP), and is demonstrated in this graphic below:
 
 ![maup](https://geoservices.leventhalmap.org/docs/media/img/maup.png)
 
