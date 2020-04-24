@@ -42,3 +42,11 @@ Map Stories are lightweight, interactive interpretive overlays on our Digital Co
 3. Paste the id string for your map into the “Enter Digital Commonwealth ID” field of the Extent Viewer, and click “Load” 
 
 <img src='https://geoservices.leventhalmap.org/docs/media/img/iiif-viewer.png'></img>
+
+4. You should see the map pop up in this viewer. Hold Shift and drag around an area which you’d like to annotate in the next “step” of your map storyline. 
+
+!> The story viewer will automatically give you a bit of buffer on the bottom edge to account for the caption box, but you should still give a generous margin on the bottom side of your area.
+
+5. If you need to adjust the box, shift and drag on one of its edges, or just shift and drag in a new place
+
+<img src='https://geoservices.leventhalmap.org/docs/media/img/shift-drag.png'></img>
